@@ -4,7 +4,6 @@ import PageHero from '@/components/landing/PageHero';
 import CTASection from '@/components/landing/CTASection';
 import Footer from '@/components/landing/Footer';
 import Reveal from '@/components/site/Reveal';
-import Photo from '@/components/site/Photo';
 import SectionHead from '@/components/site/SectionHead';
 import { photos } from '@/assets/photos';
 
@@ -14,10 +13,16 @@ const departments = [
     intro: 'Strategische Ausrichtung und unternehmerische Verantwortung.',
     members: [
       {
-        name: 'Sebastian Andre Deutsch, Thomas Friedrich Witt',
+        name: 'Sebastian Andre Deutsch',
         role: 'Geschäftsführer',
         description:
-          'Verantworten die strategische Ausrichtung der Gesellschaft und die Steuerung der Entwicklungsaufträge im Unternehmensverbund.',
+          'Verantwortet die strategische Ausrichtung der Gesellschaft und die Entwicklung des Leistungsportfolios im Unternehmensverbund.',
+      },
+      {
+        name: 'Thomas Friedrich Witt',
+        role: 'Geschäftsführer',
+        description:
+          'Verantwortet die operative Steuerung der Entwicklungsaufträge sowie Organisation, Recht und Finanzen.',
       },
     ],
   },
@@ -26,13 +31,13 @@ const departments = [
     intro: 'Operative Steuerung und verlässliche Abwicklung aller Entwicklungsaufträge.',
     members: [
       {
-        name: 'Sabine Vogt',
+        name: 'Miriam Kastner',
         role: 'Leiterin Operations',
         description:
           'Sorgt dafür, dass Entwicklungsaufträge planbar laufen — von der Beauftragung bis zur Abnahme.',
       },
       {
-        name: 'Andrea Wenzel',
+        name: 'Franziska Ohlert',
         role: 'Leiterin Finanzen',
         description:
           'Hält Aufwände und Abrechnung im Blick und sorgt für transparente Leistungsnachweise gegenüber den Auftraggebern.',
@@ -44,13 +49,13 @@ const departments = [
     intro: 'Erste Ansprechpartner für Bewerber und Mitarbeitende — vom Onboarding bis zur Kultur.',
     members: [
       {
-        name: 'Jonas Beckmann',
+        name: 'Florian Steinbach',
         role: 'Recruiting & Community',
         description:
           'Erste Anlaufstelle für neue Bewerberinnen und Bewerber — vom ersten Kontakt bis zum Onboarding.',
       },
       {
-        name: 'Katrin Hofmann',
+        name: 'Annika Roswitha Lehmann',
         role: 'Head of People & Culture',
         description:
           'Verantwortlich für ein wertschätzendes Miteinander — intern wie auch in der Zusammenarbeit mit unseren Mitarbeitenden.',
@@ -62,13 +67,13 @@ const departments = [
     intro: 'Architektur, Implementierung und Betrieb der beauftragten Softwarelösungen.',
     members: [
       {
-        name: 'Michael Schreiber',
+        name: 'Marcel Hübner',
         role: 'Projektleiter',
         description:
           'Leitet Entwicklungsaufträge und sorgt dafür, dass Anforderungen, Zeitpläne und Qualität zusammenkommen.',
       },
       {
-        name: 'Stefan Lindner',
+        name: 'Kevin Amrhein',
         role: 'Softwareentwickler',
         description:
           'Entwickelt Backend-Services und Schnittstellen und verantwortet Code-Qualität und Releases.',
@@ -80,13 +85,13 @@ const departments = [
     intro: 'Strukturierte Tests und belastbare Ergebnisse vor jeder Abnahme.',
     members: [
       {
-        name: 'Daniel Krüger',
+        name: 'Philipp Aurich',
         role: 'Lead Quality Assurance',
         description:
           'Verantwortet Teststrategien je Auftrag und stellt einheitliche Qualitätsstandards über alle Projekte hinweg sicher.',
       },
       {
-        name: 'Lena Bachmann',
+        name: 'Nadine Pflüger',
         role: 'Testkoordinatorin',
         description:
           'Plant Testzyklen, betreut die Testautomatisierung und wertet Ergebnisse strukturiert aus.',
@@ -99,13 +104,13 @@ const departments = [
       'Direkter Draht zu den Fachbereichen der verbundenen Unternehmen — von der Anforderung bis zur Abnahme.',
     members: [
       {
-        name: 'Tobias Reinhardt',
+        name: 'Sven Grothmann',
         role: 'Requirements Engineer',
         description:
           'Übersetzt fachliche Anforderungen der Auftraggeber in technische Spezifikationen und prüfbare Abnahmekriterien.',
       },
       {
-        name: 'Carolin Maier',
+        name: 'Josefine Wallner',
         role: 'Auftragskoordinatorin',
         description:
           'Koordiniert Aufträge aus dem Unternehmensverbund und hält Umfang, Termine und Abstimmungen zusammen.',
@@ -113,6 +118,7 @@ const departments = [
     ],
   },
 ];
+
 
 const Team = () => {
   useEffect(() => {
@@ -131,30 +137,6 @@ const Team = () => {
         imageAlt="Teambesprechung im Berliner Büro"
       />
 
-      {/* Photo band */}
-      <section className="bg-background">
-        <div className="max-w-7xl mx-auto px-5 sm:px-8 pt-16 sm:pt-20">
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-            <Reveal>
-              <Photo src={photos.officeOpenSpace} alt="Offener Arbeitsbereich" ratio="aspect-[3/4]" />
-            </Reveal>
-            <Reveal delay={2}>
-              <Photo
-                src={photos.collaborationHands}
-                alt="Gemeinsame Abstimmung am Tisch"
-                ratio="aspect-[3/4]"
-              />
-            </Reveal>
-            <Reveal delay={3}>
-              <Photo
-                src={photos.pairProgramming}
-                alt="Pair Programming im Entwicklungsteam"
-                ratio="aspect-[3/4]"
-              />
-            </Reveal>
-          </div>
-        </div>
-      </section>
 
       <section className="bg-background">
         <div className="max-w-7xl mx-auto px-5 sm:px-8 py-20 sm:py-28">
