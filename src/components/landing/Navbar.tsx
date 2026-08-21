@@ -45,7 +45,7 @@ const Navbar = () => {
             scrolled ? 'h-16' : 'h-20 sm:h-24'
           }`}
         >
-          <Link to="/" className="shrink-0 flex items-baseline gap-1" aria-label="Vendis Development Services — Startseite">
+          <Link to="/" className="shrink-0 flex items-baseline gap-[1px]" aria-label="Vendis Development Services — Startseite">
             <span
               className={`font-display font-semibold tracking-[-0.03em] leading-none transition-all duration-300 ${
                 scrolled ? 'text-xl' : 'text-[1.6rem]'
