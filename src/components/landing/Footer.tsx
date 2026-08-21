@@ -1,102 +1,141 @@
 import { Link } from 'react-router-dom';
-import { Mail, Phone, MapPin } from 'lucide-react';
+import { ArrowUpRight } from 'lucide-react';
 import logo from '@/assets/logo.png';
 
-const Footer = () => {
-  return (
-    <footer className="relative border-t-2 border-primary/20 bg-gradient-blue-subtle">
-      <div className="max-w-7xl mx-auto px-5 sm:px-6 py-16 sm:py-20">
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 sm:gap-8">
-          {/* Logo + Tagline */}
-          <div>
-            <Link to="/" className="flex items-center mb-4">
-              <img src={logo} alt="Vendis Development Services" className="h-5 hover:scale-105 transition-transform duration-200" />
-            </Link>
-            <p className="text-sm text-muted-foreground leading-relaxed">
-              Auftragsentwicklung für verbundene Unternehmen — Analyse, Design,
-              Implementierung, Test, Wartung und Betriebs-Support von Softwarelösungen.
-            </p>
-          </div>
+const columns = [
+  {
+    title: 'Leistungen',
+    links: [
+      { label: 'Analyse & Spezifikation', href: '/entwicklung#analyse' },
+      { label: 'Design & Implementierung', href: '/entwicklung#implementierung' },
+      { label: 'Test & Qualitätssicherung', href: '/entwicklung#test' },
+      { label: 'Wartung & Betriebs-Support', href: '/entwicklung#betrieb' },
+    ],
+  },
+  {
+    title: 'Unternehmen',
+    links: [
+      { label: 'Technologien', href: '/technologien' },
+      { label: 'Prozess', href: '/prozess' },
+      { label: 'Team', href: '/team' },
+      { label: 'Karriere', href: '/karriere' },
+    ],
+  },
+];
 
-          {/* Unternehmen */}
-          <div>
-            <h4 className="font-semibold text-sm mb-4 text-foreground">Unternehmen</h4>
-            <ul className="space-y-2.5">
-              {[
-                { label: 'Prozess', href: '/prozess' },
-                { label: 'Team', href: '/team' },
-                { label: 'Karriere', href: '/karriere' },
-                { label: 'Kontakt', href: '/kontakt' },
-              ].map((link) => (
-                <li key={link.href}>
-                  <Link to={link.href} className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Leistungen */}
-          <div>
-            <h4 className="font-semibold text-sm mb-4 text-foreground">Leistungen</h4>
-            <ul className="space-y-2.5">
-              {[
-                { label: 'Analyse & Spezifikation', href: '/entwicklung#analyse' },
-                { label: 'Architektur & Implementierung', href: '/entwicklung#implementierung' },
-                { label: 'Test & Qualitätssicherung', href: '/entwicklung#test' },
-                { label: 'Wartung & Betriebs-Support', href: '/entwicklung#betrieb' },
-                { label: 'Technologien', href: '/technologien' },
-              ].map((link, i) => (
-                <li key={i}>
-                  <Link to={link.href} className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-
-          {/* Kontakt */}
-          <div>
-            <h4 className="font-semibold text-sm mb-4 text-foreground">Kontakt</h4>
-            <ul className="space-y-3 text-sm text-muted-foreground">
-              <li>
-                <a href="mailto:kontakt@vendis-development.de" className="flex items-center gap-2 hover:text-primary transition-colors">
-                  <Mail className="h-4 w-4 text-primary/70 shrink-0" />
-                  kontakt@vendis-development.de
-                </a>
-              </li>
-              <li>
-                <a href="tel:+4930123456789" className="flex items-center gap-2 hover:text-primary transition-colors">
-                  <Phone className="h-4 w-4 text-primary/70 shrink-0" />
-                  030 123456789
-                </a>
-              </li>
-              <li className="flex items-start gap-2">
-                <MapPin className="h-4 w-4 text-primary/70 shrink-0 mt-0.5" />
-                <span>Neue Schönhauser Str. 2<br />10178 Berlin</span>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-      </div>
-
-      <div className="border-t border-border/50 bg-muted/30">
-        <div className="max-w-7xl mx-auto px-5 sm:px-6 py-6 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-xs text-muted-foreground">
-            © {new Date().getFullYear()} Vendis Development Services GmbH. Alle Rechte vorbehalten.
+const Footer = () => (
+  <footer className="bg-ink text-ink-foreground">
+    <div className="max-w-7xl mx-auto px-5 sm:px-8 pt-20 pb-10 sm:pt-28">
+      {/* Closing headline */}
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 pb-16 border-b border-ink-foreground/15">
+        <h2 className="font-display text-[2.1rem] sm:text-[3rem] lg:text-[3.6rem] font-semibold leading-[1.02]">
+          Entwicklungsauftrag
+          <br />
+          im Verbund?
+        </h2>
+        <div className="flex flex-col items-start justify-end gap-6">
+          <p className="text-ink-foreground/60 leading-relaxed max-w-md">
+            Schildern Sie uns Umfang und Zielsystem — wir melden uns innerhalb von 24 Stunden
+            an Werktagen mit einer ersten technischen Einschätzung.
           </p>
-          <div className="flex items-center gap-6">
-            <Link to="/impressum" className="text-xs text-muted-foreground hover:text-primary transition-colors">Impressum</Link>
-            <Link to="/datenschutz" className="text-xs text-muted-foreground hover:text-primary transition-colors">Datenschutz</Link>
-          </div>
+          <Link
+            to="/kontakt"
+            className="group inline-flex items-center gap-3 h-12 px-6 rounded-full bg-primary text-primary-foreground font-semibold hover:bg-primary/90 transition-colors"
+          >
+            Kontakt aufnehmen
+            <ArrowUpRight
+              size={17}
+              className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+            />
+          </Link>
         </div>
       </div>
-    </footer>
-  );
-};
+
+      {/* Link grid */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 py-14">
+        <div>
+          <Link to="/" className="inline-flex">
+            <img
+              src={logo}
+              alt="Vendis Development Services"
+              draggable={false}
+              className="h-5 w-auto brightness-0 invert opacity-90"
+            />
+          </Link>
+          <p className="mt-5 text-sm text-ink-foreground/55 leading-relaxed max-w-xs">
+            Auftragsentwicklung für verbundene Unternehmen — Analyse, Design, Implementierung,
+            Test, Wartung und Betriebs-Support.
+          </p>
+        </div>
+
+        {columns.map((col) => (
+          <div key={col.title}>
+            <p className="font-mono text-[11px] uppercase tracking-[0.22em] text-ink-foreground/40">
+              {col.title}
+            </p>
+            <ul className="mt-5 space-y-3">
+              {col.links.map((link) => (
+                <li key={link.label}>
+                  <Link
+                    to={link.href}
+                    className="text-sm text-ink-foreground/70 hover:text-primary-glow transition-colors"
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+
+        <div>
+          <p className="font-mono text-[11px] uppercase tracking-[0.22em] text-ink-foreground/40">
+            Kontakt
+          </p>
+          <ul className="mt-5 space-y-3 text-sm text-ink-foreground/70">
+            <li>
+              <a
+                href="mailto:kontakt@vendis-development.de"
+                className="hover:text-primary-glow transition-colors break-words"
+              >
+                kontakt@vendis-development.de
+              </a>
+            </li>
+            <li>
+              <a href="tel:+4930123456789" className="hover:text-primary-glow transition-colors">
+                030 123456789
+              </a>
+            </li>
+            <li className="text-ink-foreground/55 leading-relaxed">
+              Neue Schönhauser Str. 2
+              <br />
+              10178 Berlin
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 pt-8 border-t border-ink-foreground/15">
+        <p className="font-mono text-[11px] text-ink-foreground/40">
+          © {new Date().getFullYear()} Vendis Development Services GmbH
+        </p>
+        <div className="flex items-center gap-6">
+          <Link
+            to="/impressum"
+            className="font-mono text-[11px] uppercase tracking-[0.18em] text-ink-foreground/50 hover:text-ink-foreground transition-colors"
+          >
+            Impressum
+          </Link>
+          <Link
+            to="/datenschutz"
+            className="font-mono text-[11px] uppercase tracking-[0.18em] text-ink-foreground/50 hover:text-ink-foreground transition-colors"
+          >
+            Datenschutz
+          </Link>
+        </div>
+      </div>
+    </div>
+  </footer>
+);
 
 export default Footer;
