@@ -5,88 +5,88 @@ import PageHero from '@/components/landing/PageHero';
 import CTASection from '@/components/landing/CTASection';
 import Footer from '@/components/landing/Footer';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
-import { Lightbulb, ClipboardCheck, Users, Cable, ArrowRight, CheckCircle2 } from 'lucide-react';
+import { ArrowRight, CheckCircle2, Search, PenTool, TestTube2, LifeBuoy } from 'lucide-react';
 
 const services = [
   {
-    icon: Lightbulb,
-    id: 'beratung',
-    title: 'Technische Unternehmensberatung',
-    headline: 'Beratung',
+    icon: Search,
+    id: 'analyse',
+    title: 'Analyse & Spezifikation',
+    headline: 'Analyse',
     description:
-      'Wir analysieren technische Vorhaben unabhängig und herstellerneutral — von der Machbarkeitsstudie über die Variantenbewertung bis zum belastbaren Lastenheft.',
+      'Wir nehmen die fachlichen Anforderungen des beauftragenden Unternehmens auf und überführen sie in eine belastbare technische Spezifikation.',
     longDescription:
-      'Unsere Berater bringen jahrzehntelange Erfahrung aus Industrie, Telekommunikation und öffentlicher Hand mit. Wir liefern Entscheidungsgrundlagen, die wirtschaftlich und technisch tragen.',
+      'Am Anfang jedes Auftrags steht das gemeinsame Verständnis: Welche Prozesse werden abgebildet, welche Systeme sind angebunden, welche Randbedingungen gelten. Ergebnis ist eine umsetzbare Spezifikation inklusive Aufwandsschätzung und Abnahmekriterien.',
     features: [
-      'Machbarkeitsstudien & Variantenvergleiche',
-      'Technische Konzepte & Lastenhefte',
-      'Wirtschaftlichkeitsbewertung & Business Case',
-      'Risiko- und Schnittstellenanalyse',
-      'Strategische Technologie-Roadmap',
-      'Unabhängige Gutachten & Second Opinions',
+      'Aufnahme fachlicher Anforderungen',
+      'Analyse bestehender Systeme & Schnittstellen',
+      'Technische Spezifikation und User Stories',
+      'Aufwands- und Machbarkeitsbewertung',
+      'Risiko- und Abhängigkeitsanalyse',
+      'Definition von Abnahmekriterien',
     ],
   },
   {
-    icon: ClipboardCheck,
-    id: 'projektmanagement',
-    title: 'Projektmanagement & Controlling',
-    headline: 'Projektsteuerung',
+    icon: PenTool,
+    id: 'implementierung',
+    title: 'Design & Implementierung',
+    headline: 'Entwicklung',
     description:
-      'Technische und wirtschaftliche Projektleitung über alle Gewerke hinweg — planbar in Termin, Budget und Qualität.',
+      'Softwarearchitektur, Datenmodell und Umsetzung — in iterativen Zyklen, versioniert, dokumentiert und nachvollziehbar.',
     longDescription:
-      'Wir übernehmen die Steuerung komplexer Technik-Projekte von der Initiierung bis zur Abnahme. Mit klarem Reporting, sauberer Dokumentation und belastbarer Kosten- und Terminkontrolle.',
+      'Wir entwerfen die Architektur und setzen sie um: Backend-Services, Web-Frontends, Datenbanken und Schnittstellen. Die Entwicklung erfolgt in kurzen Zyklen mit Code-Reviews, automatisierten Builds und lauffähigen Zwischenständen.',
     features: [
-      'Projektleitung & Projektsteuerung (PMI / IPMA)',
-      'Termin-, Kosten- und Qualitätscontrolling',
-      'Ausschreibung & Vergabe (auch VOB/VOL)',
-      'Bauüberwachung & Abnahme',
-      'Stakeholder- & Lenkungskreis-Reporting',
-      'Claim- und Nachtragsmanagement',
+      'Softwarearchitektur & technisches Design',
+      'Datenmodellierung und Datenbankentwicklung',
+      'Backend-Services und REST-/GraphQL-APIs',
+      'Web-Frontends und interne Anwendungen',
+      'Schnittstellen- und Systemintegration',
+      'Code-Reviews, Versionskontrolle, CI/CD',
     ],
   },
   {
-    icon: Users,
-    id: 'personalberatung',
-    title: 'Personalberatung',
-    headline: 'Personal',
+    icon: TestTube2,
+    id: 'test',
+    title: 'Test & Qualitätssicherung',
+    headline: 'Qualität',
     description:
-      'Fach- und Führungskräfte für Technik, Projektmanagement und Vertrieb — passgenau besetzt, diskret begleitet.',
+      'Automatisierte und manuelle Tests über alle Ebenen — damit Releases planbar und reproduzierbar bleiben.',
     longDescription:
-      'Wir kennen die Branche und die Profile. Unsere Personalberatung verbindet technisches Verständnis mit langjährigem Netzwerk in Telekommunikation, Elektrotechnik und Anlagenbau.',
+      'Qualitätssicherung ist fester Bestandteil jedes Auftrags: von Unit- und Integrationstests über End-to-End-Tests bis zur strukturierten Abnahmeunterstützung und Fehlerdokumentation.',
     features: [
-      'Direktansprache von Fach- und Führungskräften',
-      'Besetzung von Projekt- und Bauleitungen',
-      'Recruiting für Vertrieb & Technik',
-      'Sonstige Akquisitionsdienstleistungen',
-      'Diskretion & Branchen-Netzwerk',
-      'Garantie- und Nachbesetzungsklauseln',
+      'Unit- und Integrationstests',
+      'End-to-End- und Regressionstests',
+      'Testautomatisierung in der CI-Pipeline',
+      'Last- und Performancetests',
+      'Strukturierte Fehlerdokumentation',
+      'Unterstützung bei der Abnahme',
     ],
   },
   {
-    icon: Cable,
-    id: 'anlagenplanung',
-    title: 'Elektro- & Fernmeldetechnik',
-    headline: 'Anlagenplanung',
+    icon: LifeBuoy,
+    id: 'betrieb',
+    title: 'Wartung & Betriebs-Support',
+    headline: 'Betrieb',
     description:
-      'Planung und Vertrieb elektrotechnischer und fernmeldetechnischer Anlagen aller Art — von der Vorplanung bis zur Inbetriebnahme.',
+      'Nach dem Go-live geht es weiter: Fehlerbehebung, Updates, Weiterentwicklung und technischer Support im laufenden Betrieb.',
     longDescription:
-      'Wir planen Anlagen nach geltenden Normen und gängiger HOAI-Logik. Vom Konzept über Leistungsverzeichnis und Vergabe bis zur Bauüberwachung und Übergabe an den Betreiber.',
+      'Wir halten bestehende Softwarelösungen betriebsfähig und entwickeln sie weiter — mit definierten Reaktionswegen, dokumentierten Änderungen und nachvollziehbaren Releases.',
     features: [
-      'Vorplanung & Entwurfsplanung',
-      'Ausführungs- & Detailplanung',
-      'Fernmelde-, Daten- und Sicherheitstechnik',
-      'Elektrotechnische Anlagen (Stark- & Schwachstrom)',
-      'Bauüberwachung & Inbetriebnahme',
-      'Vertrieb & Lieferung passender Komponenten',
+      'Fehleranalyse und Bugfixing',
+      'Sicherheits- und Abhängigkeits-Updates',
+      'Refactoring und technische Weiterentwicklung',
+      'Release- und Deployment-Begleitung',
+      'Monitoring-Begleitung und Incident-Bearbeitung',
+      'Technische Dokumentation und Wissenstransfer',
     ],
   },
 ];
 
-const Leistungen = () => {
+const Entwicklung = () => {
   const { ref, isVisible } = useScrollAnimation();
 
   useEffect(() => {
-    document.title = 'Leistungen | for.tel Solutions';
+    document.title = 'Entwicklung | Vendis Development Services GmbH';
     const observer = new IntersectionObserver(
       (entries) => entries.forEach((e) => e.isIntersecting && e.target.classList.add('scroll-visible')),
       { threshold: 0.1 }
@@ -98,13 +98,13 @@ const Leistungen = () => {
   return (
     <>
       <PageHero
-        eyebrow="Leistungen"
+        eyebrow="Entwicklung"
         title="Unsere"
-        highlight="Leistungen"
-        subtitle="Vier Säulen: Technische Beratung, Projektmanagement, Personalberatung und Anlagenplanung — aus einer Hand."
+        highlight="Entwicklungsleistungen"
+        subtitle="Analyse, Design, Implementierung, Test, Wartung und Betriebs-Support von Softwarelösungen — als Auftragsentwicklung für verbundene Unternehmen."
         breadcrumb={[
           { label: 'Home', href: '/' },
-          { label: 'Leistungen' },
+          { label: 'Entwicklung' },
         ]}
       />
 
@@ -116,12 +116,13 @@ const Leistungen = () => {
             return (
               <div
                 key={service.id}
+                id={service.id}
                 className={`scroll-hidden delay-${Math.min(i + 1, 4)} ${isVisible ? 'scroll-visible' : ''}`}
               >
-                <div className={`grid lg:grid-cols-2 gap-12 items-center ${isEven ? 'lg:direction-rtl' : ''}`}>
+                <div className="grid lg:grid-cols-2 gap-12 items-center">
                   <div className={isEven ? 'lg:order-2' : ''}>
                     <div className="flex items-center gap-3 mb-5">
-                      <div className="w-12 h-12 rounded-xl bg-gradient-blue flex items-center justify-center">
+                      <div className="w-12 h-12 rounded-md bg-gradient-blue flex items-center justify-center">
                         <Icon size={22} className="text-primary-foreground" />
                       </div>
                       <span className="text-xs font-bold text-muted-foreground tracking-wider">
@@ -136,12 +137,12 @@ const Leistungen = () => {
                       to="/kontakt"
                       className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-foreground text-background text-sm font-semibold hover:bg-foreground/90 transition-colors"
                     >
-                      Projekt besprechen
+                      Anfrage stellen
                       <ArrowRight size={15} />
                     </Link>
                   </div>
                   <div className={isEven ? 'lg:order-1' : ''}>
-                    <div className="rounded-2xl border border-border/60 bg-white p-8">
+                    <div className="rounded-md border border-border/60 bg-white p-8">
                       <h3 className="text-sm font-bold text-foreground mb-6">Was wir liefern</h3>
                       <div className="grid gap-4">
                         {service.features.map((f) => (
@@ -166,4 +167,4 @@ const Leistungen = () => {
   );
 };
 
-export default Leistungen;
+export default Entwicklung;
