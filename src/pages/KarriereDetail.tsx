@@ -1,28 +1,35 @@
 import { useParams, Link, Navigate } from 'react-router-dom';
-import { MapPin, Clock, Timer, Euro, ArrowRight, CheckCircle2, Mail } from 'lucide-react';
+import { ArrowRight, Mail } from 'lucide-react';
 
 import PageHero from '@/components/landing/PageHero';
 import Footer from '@/components/landing/Footer';
-import { useScrollAnimation } from '@/hooks/useScrollAnimation';
+import Reveal from '@/components/site/Reveal';
+import TickList from '@/components/site/TickList';
 import { stellen } from '@/data/karriereStellen';
 
 const KarriereDetail = () => {
   const { slug } = useParams<{ slug: string }>();
   const stelle = stellen.find((s) => s.slug === slug);
-  const { ref, isVisible } = useScrollAnimation();
 
   if (!stelle) return <Navigate to="/karriere" replace />;
 
   const contentSections = [
-    { title: 'Deine Aufgaben', items: stelle.aufgaben },
-    { title: 'Dein Profil', items: stelle.voraussetzungen },
-    { title: 'Was wir bieten', items: stelle.benefits },
+    { index: '§ 01', title: 'Deine Aufgaben', items: stelle.aufgaben },
+    { index: '§ 02', title: 'Dein Profil', items: stelle.voraussetzungen },
+    { index: '§ 03', title: 'Was wir bieten', items: stelle.benefits },
+  ];
+
+  const meta = [
+    { label: 'Standort', value: stelle.standort },
+    { label: 'Arbeitsmodell', value: stelle.modell },
+    ...(stelle.arbeitszeit ? [{ label: 'Arbeitszeit', value: stelle.arbeitszeit }] : []),
+    ...(stelle.stundenlohn ? [{ label: 'Stundenlohn', value: stelle.stundenlohn }] : []),
   ];
 
   return (
     <>
-
       <PageHero
+        eyebrow="Offene Position"
         title={stelle.titel}
         subtitle={stelle.kurzbeschreibung}
         breadcrumb={[
@@ -32,114 +39,85 @@ const KarriereDetail = () => {
         ]}
       />
 
-      <section ref={ref} className="py-20">
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="flex flex-col lg:flex-row gap-8">
-            {/* Left column — Content */}
-            <div className="flex-1 space-y-6">
-              {/* About */}
-              <div className={`scroll-hidden ${isVisible ? 'scroll-visible' : ''} rounded-2xl border border-border bg-card p-8`}>
-                <h2 className="text-lg font-bold text-foreground mb-4">Über die Position</h2>
-                <p className="text-muted-foreground leading-relaxed">{stelle.beschreibung}</p>
-              </div>
+      <section className="bg-background">
+        <div className="max-w-7xl mx-auto px-5 sm:px-8 py-20 sm:py-28">
+          <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_340px] gap-14 lg:gap-20">
+            {/* Inhalt */}
+            <div>
+              <Reveal>
+                <p className="border-t border-border pt-5 font-mono text-[11px] uppercase tracking-[0.22em] text-muted-foreground">
+                  Über die Position
+                </p>
+                <p className="mt-6 text-lg sm:text-xl leading-relaxed text-foreground/80">
+                  {stelle.beschreibung}
+                </p>
+              </Reveal>
 
-              {/* Sections */}
-              {contentSections.map((section, i) => (
-                <div
-                  key={section.title}
-                  className={`scroll-hidden delay-${i + 1} ${isVisible ? 'scroll-visible' : ''} rounded-2xl border border-border bg-card p-8`}
-                >
-                  <h2 className="text-lg font-bold text-foreground mb-5">{section.title}</h2>
-                  <ul className="space-y-3">
-                    {section.items.map((item, j) => (
-                      <li key={j} className="flex items-start gap-3 text-sm text-muted-foreground leading-relaxed">
-                        <CheckCircle2 size={16} className="text-primary mt-0.5 shrink-0" />
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
+              <div className="mt-16 space-y-14">
+                {contentSections.map((section, i) => (
+                  <Reveal key={section.title} delay={((i % 3) + 1) as 1 | 2 | 3}>
+                    <div className="flex items-center gap-4 border-t border-border pt-5">
+                      <span className="font-mono text-[11px] tracking-[0.22em] text-primary">
+                        {section.index}
+                      </span>
+                      <span className="font-mono text-[11px] uppercase tracking-[0.22em] text-muted-foreground">
+                        {section.title}
+                      </span>
+                    </div>
+                    <div className="mt-6">
+                      <TickList items={section.items} />
+                    </div>
+                  </Reveal>
+                ))}
+              </div>
             </div>
 
-            {/* Right column — Sticky sidebar */}
-            <div className="w-full lg:w-80 shrink-0">
-              <div className="lg:sticky lg:top-28 space-y-6">
-                {/* CTA */}
-                <div className={`scroll-hidden delay-1 ${isVisible ? 'scroll-visible' : ''} rounded-2xl border border-border bg-card p-8`}>
-                  <h3 className="text-lg font-bold text-foreground mb-2">Interessiert?</h3>
-                  <p className="text-sm text-muted-foreground mb-5">
-                    Bewirb dich jetzt und werde Teil unseres Teams.
+            {/* Sidebar */}
+            <aside>
+              <div className="lg:sticky lg:top-28 space-y-10">
+                <Reveal>
+                  <dl className="border-t border-border">
+                    {meta.map((m) => (
+                      <div
+                        key={m.label}
+                        className="flex items-baseline justify-between gap-4 border-b border-border py-4"
+                      >
+                        <dt className="font-mono text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
+                          {m.label}
+                        </dt>
+                        <dd className="text-sm font-medium text-foreground text-right">
+                          {m.value}
+                        </dd>
+                      </div>
+                    ))}
+                  </dl>
+                </Reveal>
+
+                <Reveal delay={2} className="bg-ink text-ink-foreground rounded-lg p-8">
+                  <h3 className="font-display text-2xl font-semibold leading-tight">
+                    Interessiert?
+                  </h3>
+                  <p className="mt-3 text-sm leading-relaxed text-ink-foreground/70">
+                    Bewirb dich in wenigen Minuten — wir melden uns innerhalb von 24 Stunden
+                    an Werktagen.
                   </p>
                   <Link
                     to={`/karriere/bewerbung?stelle=${encodeURIComponent(stelle.titel)}`}
-                    className="flex items-center justify-center gap-2 w-full px-6 py-3 rounded-full bg-gradient-blue text-primary-foreground font-semibold text-sm shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/35 hover:scale-[1.02] transition-all duration-200"
+                    className="mt-6 inline-flex w-full items-center justify-between gap-2 rounded-md bg-primary px-6 py-3.5 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
                   >
                     Jetzt bewerben
                     <ArrowRight size={16} />
                   </Link>
-                </div>
-
-                {/* Meta */}
-                <div className={`scroll-hidden delay-2 ${isVisible ? 'scroll-visible' : ''} rounded-2xl border border-border bg-card p-8 space-y-4`}>
-                  <div className="flex items-center gap-3">
-                    <div className="w-9 h-9 rounded-xl bg-primary/10 flex items-center justify-center">
-                      <MapPin size={16} className="text-primary" />
-                    </div>
-                    <div>
-                      <p className="text-xs text-muted-foreground">Standort</p>
-                      <p className="text-sm font-medium text-foreground">{stelle.standort}</p>
-                    </div>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <div className="w-9 h-9 rounded-xl bg-primary/10 flex items-center justify-center">
-                      <Clock size={16} className="text-primary" />
-                    </div>
-                    <div>
-                      <p className="text-xs text-muted-foreground">Arbeitsmodell</p>
-                      <p className="text-sm font-medium text-foreground">{stelle.modell}</p>
-                    </div>
-                  </div>
-                  {stelle.arbeitszeit && (
-                    <div className="flex items-center gap-3">
-                      <div className="w-9 h-9 rounded-xl bg-primary/10 flex items-center justify-center">
-                        <Timer size={16} className="text-primary" />
-                      </div>
-                      <div>
-                        <p className="text-xs text-muted-foreground">Arbeitszeit</p>
-                        <p className="text-sm font-medium text-foreground">{stelle.arbeitszeit}</p>
-                      </div>
-                    </div>
-                  )}
-                  {stelle.stundenlohn && (
-                    <div className="flex items-center gap-3">
-                      <div className="w-9 h-9 rounded-xl bg-primary/10 flex items-center justify-center">
-                        <Euro size={16} className="text-primary" />
-                      </div>
-                      <div>
-                        <p className="text-xs text-muted-foreground">Stundenlohn</p>
-                        <p className="text-sm font-medium text-foreground">{stelle.stundenlohn}</p>
-                      </div>
-                    </div>
-                  )}
-                </div>
-
-                {/* Contact */}
-                <div className={`scroll-hidden delay-3 ${isVisible ? 'scroll-visible' : ''} rounded-2xl border border-border bg-card p-8`}>
-                  <h3 className="text-lg font-bold text-foreground mb-2">Fragen zur Stelle?</h3>
-                  <p className="text-sm text-muted-foreground mb-5">
-                    Wir helfen dir gerne weiter.
-                  </p>
                   <Link
                     to="/kontakt"
-                    className="flex items-center justify-center gap-2 w-full px-6 py-3 rounded-full border border-border text-foreground font-semibold text-sm hover:bg-accent transition-colors duration-200"
+                    className="mt-3 inline-flex w-full items-center justify-between gap-2 rounded-md border border-ink-foreground/20 px-6 py-3.5 text-sm font-semibold text-ink-foreground transition-colors hover:bg-ink-foreground/10"
                   >
+                    Fragen zur Stelle
                     <Mail size={16} />
-                    Kontakt aufnehmen
                   </Link>
-                </div>
+                </Reveal>
               </div>
-            </div>
+            </aside>
           </div>
         </div>
       </section>

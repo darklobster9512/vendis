@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom';
 import { ArrowUpRight } from 'lucide-react';
-import logo from '@/assets/logo.png';
 
 const columns = [
   {
@@ -54,14 +53,13 @@ const Footer = () => (
       {/* Link grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 py-14">
         <div>
-          <Link to="/" className="inline-flex">
-            <img
-              src={logo}
-              alt="Vendis Development Services"
-              draggable={false}
-              className="h-5 w-auto brightness-0 invert opacity-90"
-            />
+          <Link to="/" className="inline-flex items-baseline gap-[1px]" aria-label="Vendis Development Services — Startseite">
+            <span className="font-display text-2xl font-semibold tracking-[-0.03em] leading-none text-ink-foreground">
+              vendis
+            </span>
+            <span className="text-primary text-2xl leading-none">.</span>
           </Link>
+
           <p className="mt-5 text-sm text-ink-foreground/55 leading-relaxed max-w-xs">
             Auftragsentwicklung für verbundene Unternehmen — Analyse, Design, Implementierung,
             Test, Wartung und Betriebs-Support.
