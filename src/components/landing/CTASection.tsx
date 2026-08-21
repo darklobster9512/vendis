@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { ArrowUpRight } from 'lucide-react';
-import { photos } from '@/assets/photos';
+import { photos } from '@/lib/photos';
 import Photo from '@/components/site/Photo';
 import Reveal from '@/components/site/Reveal';
 
