@@ -111,13 +111,6 @@ const Bewerbung = () => {
                   title="In zwei Minuten bewerben."
                   text="Felder mit * sind Pflichtfelder. Unterlagen kannst du uns im Anschluss per E-Mail nachreichen."
                 />
-                <Reveal delay={3} className="mt-10 hidden lg:block">
-                  <Photo
-                    src={photos.collaborationHands}
-                    alt="Zusammenarbeit im Team"
-                    ratio="aspect-[4/3]"
-                  />
-                </Reveal>
               </div>
             </div>
 
