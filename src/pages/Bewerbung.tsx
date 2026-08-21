@@ -6,8 +6,6 @@ import PageHero from '@/components/landing/PageHero';
 import Footer from '@/components/landing/Footer';
 import Reveal from '@/components/site/Reveal';
 import SectionHead from '@/components/site/SectionHead';
-import Photo from '@/components/site/Photo';
-import { photos } from '@/assets/photos';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import {
