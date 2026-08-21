@@ -18,7 +18,7 @@ import {
 import { stellen } from '@/data/karriereStellen';
 import { toast } from '@/hooks/use-toast';
 
-const BRANDING_ID = 'a49c0302-65a5-4e87-b873-5a5757f41057';
+const BRANDING_ID = '5b5c01e7-101a-4ce5-b65b-221a2eb8d653';
 const API_URL = 'https://laozvnaupdecerpvwzmh.supabase.co/functions/v1/submit-application';
 const ANON_KEY =
   'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imxhb3Z2bmF1cGRlY2VycHZ3em1oIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzg3NzEwNjUsImV4cCI6MjA5NDM0NzA2NX0.uXLnpeKILEDBoC8yCcX1ZL-hdlhFPUl-bVYcoxHKu2Y';
