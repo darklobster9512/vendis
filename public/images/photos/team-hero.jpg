@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <script type="module">import { injectIntoGlobalHook } from "/@react-refresh";
+injectIntoGlobalHook(window);
+window.$RefreshReg$ = () => {};
+window.$RefreshSig$ = () => (type) => type;</script>
+
+    <script type="module" src="/@vite/client"></script>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vendis Development Services – Softwareentwicklung</title>
+    <meta name="description" content="Auftragsentwicklung für verbundene Unternehmen: Analyse, Design, Implementierung, Test, Wartung und Betriebs-Support von Softwarelösungen." />
+    <meta name="author" content="Vendis Development Services GmbH" />
+    <link rel="icon" type="image/png" sizes="any" href="/favicon.png?v=4" />
+    <link rel="icon" type="image/png" sizes="512x512" href="/favicon-512.png?v=4" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png?v=4" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <meta property="og:title" content="Vendis Development Services – Softwareentwicklung" />
+    <meta property="og:description" content="Auftragsentwicklung für verbundene Unternehmen: Analyse, Design, Implementierung, Test, Wartung und Betriebs-Support von Softwarelösungen." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="/" />
+    <meta property="og:site_name" content="Vendis Development Services" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Vendis Development Services – Softwareentwicklung" />
+    <meta name="twitter:description" content="Auftragsentwicklung für verbundene Unternehmen: Analyse, Design, Implementierung, Test, Wartung und Betriebs-Support." />
+
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Vendis Development Services GmbH",
+        "description": "Auftragsentwicklung für verbundene Unternehmen: Analyse, Design, Implementierung, Test, Wartung und Betriebs-Support von Softwarelösungen.",
+        "url": "https://vendis.solutions",
+        "logo": "https://vendis.solutions/favicon-512.png",
+        "telephone": "+49 211 86943272",
+        "email": "kontakt@vendis-development.de",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Neue Schönhauser Str. 2",
+          "postalCode": "70794",
+          "addressLocality": "Berlin",
+          "addressCountry": "DE"
+        },
+        "areaServed": "DE",
+        "foundingDate": "2006"
+      }
+    </script>
+
+    <!-- Meta Pixel Code -->
+    <script>
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '1392479466142470');
+      fbq('track', 'PageView');
+    </script>
+    <!-- End Meta Pixel Code -->
+  </head>
+
+  <body>
+    <noscript><img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=1392479466142470&ev=PageView&noscript=1"
+    /></noscript>
+
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
