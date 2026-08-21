@@ -14,9 +14,11 @@ export default {
     },
     extend: {
       fontFamily: {
-        sans: ['Epilogue', 'system-ui', '-apple-system', 'sans-serif'],
-        display: ['Urbanist', 'Epilogue', 'sans-serif'],
+        sans: ['Manrope', 'system-ui', '-apple-system', 'sans-serif'],
+        display: ['Sora', 'Manrope', 'sans-serif'],
+        mono: ['JetBrains Mono', 'ui-monospace', 'monospace'],
       },
+
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -51,6 +53,14 @@ export default {
         card: {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
+        },
+        surface: {
+          DEFAULT: "hsl(var(--surface))",
+          foreground: "hsl(var(--surface-foreground))",
+        },
+        ink: {
+          DEFAULT: "hsl(var(--ink))",
+          foreground: "hsl(var(--ink-foreground))",
         },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",

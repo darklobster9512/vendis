@@ -3,30 +3,29 @@ import { useEffect } from 'react';
 import PageHero from '@/components/landing/PageHero';
 import CTASection from '@/components/landing/CTASection';
 import Footer from '@/components/landing/Footer';
-import { useScrollAnimation } from '@/hooks/useScrollAnimation';
-import { Server, Layout, Database, Cloud } from 'lucide-react';
+import SectionHead from '@/components/site/SectionHead';
+import SplitRow from '@/components/site/SplitRow';
+import Reveal from '@/components/site/Reveal';
+import TickList from '@/components/site/TickList';
+import { photos } from '@/assets/photos';
 
 const capabilities = [
   {
-    icon: Server,
     title: 'Backend & Services',
     description:
       'Serverseitige Anwendungen, REST- und GraphQL-APIs, Hintergrundjobs und Integrationen — mit TypeScript/Node.js, Python, Java und .NET.',
   },
   {
-    icon: Layout,
     title: 'Frontend & Web-Apps',
     description:
       'Interne Anwendungen, Portale und Oberflächen mit React, TypeScript und Tailwind CSS — barrierearm, performant und wartbar.',
   },
   {
-    icon: Database,
     title: 'Daten & Persistenz',
     description:
       'Datenmodellierung, Migrationen und Auswertungen mit PostgreSQL, MySQL, Redis und Objektspeichern — inklusive Altsystem-Ablösungen.',
   },
   {
-    icon: Cloud,
     title: 'Cloud, CI/CD & Betrieb',
     description:
       'Containerisierung, automatisierte Pipelines und Infrastructure-as-Code mit Docker, Kubernetes, GitHub Actions und Terraform.',
@@ -67,16 +66,8 @@ const practices = [
 ];
 
 const Technologien = () => {
-  const { ref, isVisible } = useScrollAnimation();
-
   useEffect(() => {
     document.title = 'Technologien | Vendis Development Services GmbH';
-    const observer = new IntersectionObserver(
-      (entries) => entries.forEach((e) => e.isIntersecting && e.target.classList.add('scroll-visible')),
-      { threshold: 0.1 }
-    );
-    document.querySelectorAll('.scroll-hidden').forEach((el) => observer.observe(el));
-    return () => observer.disconnect();
   }, []);
 
   return (
@@ -86,97 +77,108 @@ const Technologien = () => {
         title="Unser"
         highlight="Technologie-Stack"
         subtitle="Womit wir arbeiten: bewährte Sprachen, Frameworks und Werkzeuge für langlebige, wartbare Softwarelösungen."
-        breadcrumb={[
-          { label: 'Home', href: '/' },
-          { label: 'Technologien' },
-        ]}
+        breadcrumb={[{ label: 'Home', href: '/' }, { label: 'Technologien' }]}
+        image={photos.deskTopdown}
+        imageAlt="Schreibtisch mit Laptop, Notizen und Skizzen von oben"
       />
 
       {/* Kompetenzen */}
-      <section ref={ref} className="py-20">
-        <div className="max-w-6xl mx-auto px-6">
-          <div className={`text-center mb-16 scroll-hidden ${isVisible ? 'scroll-visible' : ''}`}>
-            <p className="text-sm font-semibold text-primary uppercase tracking-widest mb-3">Kompetenzen</p>
-            <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight mb-4">
-              Was wir <span className="text-gradient-blue">bauen</span>
-            </h2>
-          </div>
-          <div className="grid md:grid-cols-2 gap-6">
-            {capabilities.map((cap, i) => {
-              const Icon = cap.icon;
-              return (
-                <div
-                  key={cap.title}
-                  className={`scroll-hidden delay-${i + 1} ${isVisible ? 'scroll-visible' : ''} group rounded-md border border-border/60 bg-white p-8 hover:border-primary/20 transition-all duration-500`}
-                >
-                  <div className="w-12 h-12 rounded-md bg-gradient-blue flex items-center justify-center mb-5">
-                    <Icon size={22} className="text-primary-foreground" />
-                  </div>
-                  <h3 className="text-xl font-bold tracking-tight mb-3">{cap.title}</h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed">{cap.description}</p>
+      <section className="bg-background">
+        <div className="max-w-7xl mx-auto px-5 sm:px-8 py-20 sm:py-28">
+          <SplitRow
+            index="§ 01"
+            label="Kompetenzen"
+            title="Was wir bauen."
+            text="Vier Kompetenzfelder, die zusammen den technischen Rahmen jedes Entwicklungsauftrags bilden."
+            image={photos.pairProgramming}
+            alt="Entwicklerinnen und Entwickler arbeiten gemeinsam am Code"
+          >
+            <dl className="divide-y divide-border border-t border-border">
+              {capabilities.map((cap) => (
+                <div key={cap.title} className="py-5">
+                  <dt className="font-display text-lg font-semibold">{cap.title}</dt>
+                  <dd className="mt-2 text-sm text-muted-foreground leading-relaxed">
+                    {cap.description}
+                  </dd>
                 </div>
-              );
-            })}
-          </div>
+              ))}
+            </dl>
+          </SplitRow>
         </div>
       </section>
 
       {/* Stack */}
-      <section className="py-20 bg-muted/30">
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="text-center mb-12 scroll-hidden">
-            <p className="text-sm font-semibold text-primary uppercase tracking-widest mb-3">Stack</p>
-            <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight mb-4">
-              Werkzeuge & <span className="text-gradient-blue">Frameworks</span>
-            </h2>
-            <p className="text-muted-foreground max-w-xl mx-auto">
-              Die Technologieauswahl richtet sich nach den Vorgaben und der bestehenden Systemlandschaft des Auftraggebers.
-            </p>
-          </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      <section className="bg-ink text-ink-foreground">
+        <div className="max-w-7xl mx-auto px-5 sm:px-8 py-20 sm:py-28">
+          <SectionHead
+            tone="dark"
+            index="§ 02"
+            label="Stack"
+            title="Werkzeuge & Frameworks."
+            text="Die Technologieauswahl richtet sich nach den Vorgaben und der bestehenden Systemlandschaft des Auftraggebers."
+          />
+          <div className="mt-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-8">
             {stacks.map((p, i) => (
-              <div key={p.name} className="rounded-md border border-border/60 bg-white p-5 flex items-start gap-4">
-                <div className="w-10 h-10 rounded-md bg-primary/10 text-primary font-display font-bold text-sm flex items-center justify-center shrink-0">
-                  {String(i + 1).padStart(2, '0')}
+              <Reveal key={p.name} delay={((i % 3) + 1) as 1 | 2 | 3}>
+                <div className="border-t border-ink-foreground/20 pt-5">
+                  <span className="font-mono text-[11px] tracking-[0.22em] text-primary-glow">
+                    {String(i + 1).padStart(2, '0')}
+                  </span>
+                  <p className="mt-3 font-display text-lg font-semibold">{p.name}</p>
+                  <p className="mt-2 text-sm text-ink-foreground/60 leading-relaxed">{p.desc}</p>
                 </div>
-                <div>
-                  <p className="font-semibold text-sm text-foreground">{p.name}</p>
-                  <p className="text-xs text-muted-foreground mt-0.5 leading-relaxed">{p.desc}</p>
-                </div>
-              </div>
+              </Reveal>
             ))}
           </div>
         </div>
       </section>
 
       {/* Praxis */}
-      <section className="py-20">
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="text-center mb-12 scroll-hidden">
-            <p className="text-sm font-semibold text-primary uppercase tracking-widest mb-3">Praxis</p>
-            <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight mb-4">
-              Entwicklungs<span className="text-gradient-blue">praxis</span>
-            </h2>
-          </div>
-          <div className="grid md:grid-cols-3 gap-6">
-            {practices.map((project) => (
-              <div
-                key={project.title}
-                className="scroll-hidden rounded-md border border-border/60 bg-white p-8 hover:border-primary/20 transition-all duration-500"
-              >
-                <span className="text-xs font-semibold text-primary uppercase tracking-wider">{project.category}</span>
-                <h3 className="text-xl font-bold tracking-tight mt-2 mb-3">{project.title}</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed mb-5">{project.description}</p>
-                <div className="flex flex-wrap gap-2">
-                  {project.tags.map((tag) => (
-                    <span key={tag} className="px-3 py-1 rounded-full bg-accent text-xs font-medium text-accent-foreground">
-                      {tag}
-                    </span>
-                  ))}
+      <section className="bg-surface">
+        <div className="max-w-7xl mx-auto px-5 sm:px-8 py-20 sm:py-28">
+          <SectionHead
+            index="§ 03"
+            label="Praxis"
+            title="Entwicklungspraxis."
+            text="Wie wir Qualität, Nachvollziehbarkeit und Übergabefähigkeit im Alltag sicherstellen."
+          />
+          <div className="mt-14 grid grid-cols-1 md:grid-cols-3 gap-x-10 gap-y-12">
+            {practices.map((project, i) => (
+              <Reveal key={project.title} delay={((i % 3) + 1) as 1 | 2 | 3}>
+                <div className="border-t border-border pt-5">
+                  <span className="font-mono text-[11px] uppercase tracking-[0.22em] text-primary">
+                    {project.category}
+                  </span>
+                  <h3 className="mt-4 font-display text-xl font-semibold">{project.title}</h3>
+                  <p className="mt-3 text-sm text-muted-foreground leading-relaxed">
+                    {project.description}
+                  </p>
+                  <div className="mt-5 flex flex-wrap gap-2">
+                    {project.tags.map((tag) => (
+                      <span
+                        key={tag}
+                        className="px-3 py-1 rounded-full border border-border font-mono text-[10px] uppercase tracking-[0.14em] text-muted-foreground"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
                 </div>
-              </div>
+              </Reveal>
             ))}
           </div>
+
+          <Reveal className="mt-16">
+            <TickList
+              items={[
+                'Technologieauswahl nach Vorgaben des Auftraggebers',
+                'Keine Bindung an proprietäre Insellösungen',
+                'Dokumentierte Abhängigkeiten und Lizenzen',
+                'Übergabefähige Repositories und Pipelines',
+              ]}
+              columns={2}
+            />
+          </Reveal>
         </div>
       </section>
 

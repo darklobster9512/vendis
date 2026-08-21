@@ -1,159 +1,85 @@
 import { Link } from 'react-router-dom';
-import { ArrowRight, CheckCircle2 } from 'lucide-react';
+import { ArrowUpRight } from 'lucide-react';
+import { photos } from '@/assets/photos';
 
-const HeroSplit = () => {
-  return (
-    <section className="relative w-full bg-background overflow-hidden pt-28 sm:pt-32 pb-20 md:pb-28 px-4 sm:px-6 md:px-8">
-      <div className="absolute top-20 right-[-10%] w-[600px] h-[600px] rounded-full bg-primary/[0.05] blur-[120px] pointer-events-none" />
+const facts = [
+  { k: 'Rolle', v: 'Contract-Developer' },
+  { k: 'Auftraggeber', v: 'Verbundene Unternehmen' },
+  { k: 'Standort', v: 'Berlin, DE' },
+];
 
-      <div className="relative max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-        {/* ─────────────────────── LEFT: CONTENT ─────────────────────── */}
-        <div className="flex flex-col items-start">
-          <div className="hero-animate hero-animate-1 inline-flex items-center gap-2 py-1.5 px-3 rounded-md bg-muted border border-border mb-8">
-            <span className="flex h-2 w-2 rounded-full bg-primary" />
-            <span className="text-[11px] sm:text-xs font-semibold tracking-wider uppercase text-muted-foreground">
-              Contract-Development für verbundene Unternehmen
-            </span>
-          </div>
-
-          <h1 className="hero-animate hero-animate-2 font-display text-foreground text-4xl sm:text-5xl lg:text-6xl font-bold leading-[1.08] tracking-tight mb-6">
-            Softwareentwicklung im{' '}
-            <span className="text-primary">Unternehmensverbund.</span>
-          </h1>
-
-          <p className="hero-animate hero-animate-3 text-lg text-muted-foreground max-w-xl mb-10 leading-relaxed">
-            Wir erbringen Softwareentwicklungs- und damit zusammenhängende
-            technische Dienstleistungen als Contract-Developer für verbundene
-            Unternehmen: Analyse, Design, Implementierung, Test, Wartung und
-            Betriebs-Support von Softwarelösungen.
+const HeroSplit = () => (
+  <section className="relative bg-surface overflow-hidden">
+    <div className="max-w-7xl mx-auto px-5 sm:px-8 pt-12 pb-0 sm:pt-16">
+      <div className="grid grid-cols-1 lg:grid-cols-[1.05fr_1fr] gap-10 lg:gap-16 items-center">
+        {/* Text */}
+        <div className="pb-14 sm:pb-20">
+          <p className="hero-animate hero-animate-1 font-mono text-[11px] uppercase tracking-[0.24em] text-primary">
+            Auftragsentwicklung im Unternehmensverbund
           </p>
 
-          <div className="hero-animate hero-animate-3 flex flex-wrap gap-4">
+          <h1 className="hero-animate hero-animate-2 mt-6 font-display text-[2.6rem] sm:text-[3.6rem] lg:text-[4.6rem] font-semibold leading-[0.98] tracking-[-0.02em] text-foreground">
+            Software, die
+            <br />
+            im Verbund
+            <br />
+            <span className="text-primary">entsteht.</span>
+          </h1>
+
+          <p className="hero-animate hero-animate-3 mt-8 max-w-xl text-lg text-muted-foreground leading-relaxed">
+            Wir erbringen Softwareentwicklungs- und damit zusammenhängende technische
+            Dienstleistungen als Contract-Developer für verbundene Unternehmen: Analyse,
+            Design, Implementierung, Test, Wartung und Betriebs-Support.
+          </p>
+
+          <div className="hero-animate hero-animate-4 mt-10 flex flex-wrap gap-3">
             <Link
               to="/kontakt"
-              className="group inline-flex items-center gap-2 px-7 py-4 bg-primary text-primary-foreground font-semibold rounded-md shadow-sm hover:bg-primary/90 transition-all"
+              className="group inline-flex items-center gap-2 h-13 px-7 py-4 rounded-full bg-primary text-primary-foreground font-semibold hover:bg-primary/90 transition-colors"
             >
-              Kontakt aufnehmen
-              <ArrowRight size={17} className="transition-transform group-hover:translate-x-1" />
+              Entwicklungsauftrag anfragen
+              <ArrowUpRight
+                size={17}
+                className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+              />
             </Link>
             <Link
               to="/entwicklung"
-              className="inline-flex items-center px-7 py-4 bg-background text-foreground border border-border font-semibold rounded-md shadow-sm hover:bg-muted transition-all"
+              className="inline-flex items-center px-7 py-4 rounded-full border border-border text-foreground font-semibold hover:border-primary/50 hover:text-primary transition-colors"
             >
               Leistungen ansehen
             </Link>
           </div>
 
-          <div className="hero-animate hero-animate-4 mt-12 flex flex-wrap items-center gap-x-6 gap-y-3">
-            <span className="inline-flex items-center gap-1.5 text-sm font-semibold text-foreground/70">
-              <CheckCircle2 size={15} className="text-primary" />
-              Auftragsentwicklung
-            </span>
-            <span className="inline-flex items-center gap-1.5 text-sm font-semibold text-foreground/70">
-              <CheckCircle2 size={15} className="text-primary" />
-              Wartung & Support
-            </span>
-            <span className="inline-flex items-center gap-1.5 text-sm font-semibold text-foreground/70">
-              <CheckCircle2 size={15} className="text-primary" />
-              Test & QA
-            </span>
-            <span className="inline-flex items-center gap-1.5 text-sm font-semibold text-foreground/70">
-              <CheckCircle2 size={15} className="text-primary" />
-              Standort Berlin
-            </span>
-          </div>
+          <dl className="hero-animate hero-animate-5 mt-14 grid grid-cols-1 sm:grid-cols-3 gap-x-8">
+            {facts.map((f) => (
+              <div key={f.k} className="border-t border-border pt-4">
+                <dt className="font-mono text-[10px] uppercase tracking-[0.22em] text-muted-foreground">
+                  {f.k}
+                </dt>
+                <dd className="mt-2 text-sm font-semibold text-foreground">{f.v}</dd>
+              </div>
+            ))}
+          </dl>
         </div>
 
-        {/* ─────────────────────── RIGHT: UI MOCKUP ─────────────────────── */}
-        <div className="hero-animate hero-animate-3 relative">
-          <div className="relative bg-background border border-border rounded-md shadow-sm overflow-hidden">
-            <div className="flex items-center gap-2 px-4 py-3 border-b border-border bg-muted/40">
-              <div className="flex gap-1.5">
-                <div className="w-2.5 h-2.5 rounded-full bg-border" />
-                <div className="w-2.5 h-2.5 rounded-full bg-border" />
-                <div className="w-2.5 h-2.5 rounded-full bg-border" />
-              </div>
-              <div className="ml-3 px-3 py-1 bg-background border border-border rounded-md text-[10px] text-muted-foreground/70 w-full max-w-xs truncate font-mono">
-                app.vendis.solutions/dashboard
-              </div>
-            </div>
-
-            <div className="p-6 bg-background min-h-[420px]">
-              <div className="grid grid-cols-3 gap-4 mb-6">
-                <div className="bg-muted/40 rounded-md border border-border p-4">
-                  <div className="h-1.5 w-10 bg-primary/30 rounded-full mb-3" />
-                  <div className="text-lg font-bold text-foreground tabular-nums">12.847</div>
-                  <div className="h-1.5 w-16 bg-border rounded-full mt-2" />
-                </div>
-                <div className="bg-muted/40 rounded-md border border-border p-4">
-                  <div className="h-1.5 w-10 bg-border rounded-full mb-3" />
-                  <div className="text-lg font-bold text-foreground tabular-nums">98,4%</div>
-                  <div className="h-1.5 w-12 bg-border rounded-full mt-2" />
-                </div>
-                <div className="bg-muted/40 rounded-md border border-border p-4">
-                  <div className="h-1.5 w-10 bg-border rounded-full mb-3" />
-                  <div className="text-lg font-bold text-foreground tabular-nums">€ 42k</div>
-                  <div className="h-1.5 w-20 bg-border rounded-full mt-2" />
-                </div>
-              </div>
-
-              <div className="h-44 bg-muted/30 rounded-md border border-border relative overflow-hidden p-4">
-                <div className="absolute top-3 left-4 flex items-center gap-2">
-                  <div className="h-1.5 w-16 bg-border rounded-full" />
-                  <div className="h-1.5 w-8 bg-border rounded-full" />
-                </div>
-                <div className="absolute inset-x-4 bottom-4 flex items-end gap-2 h-28">
-                  {[40, 70, 55, 88, 62, 95, 48, 78, 100, 64].map((h, i) => (
-                    <div
-                      key={i}
-                      className="flex-1 rounded-t-[2px]"
-                      style={{
-                        height: `${h}%`,
-                        backgroundColor:
-                          i === 8
-                            ? 'hsl(var(--primary))'
-                            : `hsl(var(--primary) / ${0.15 + (h / 100) * 0.25})`,
-                      }}
-                    />
-                  ))}
-                </div>
-              </div>
-
-              <div className="flex justify-between items-center mt-5 px-1">
-                <div className="flex items-center gap-2">
-                  <div className="h-2 w-24 bg-border rounded-full" />
-                  <div className="h-2 w-12 bg-border rounded-full" />
-                </div>
-                <div className="h-2 w-14 bg-primary/30 rounded-full" />
-              </div>
-            </div>
-          </div>
-
-          <div className="absolute -bottom-6 -left-4 sm:-left-6 p-4 bg-background border border-border rounded-md shadow-sm">
-            <div className="flex items-center gap-3">
-              <div className="p-2 bg-primary/10 rounded-md">
-                <CheckCircle2 size={18} className="text-primary" />
-              </div>
-              <div>
-                <div className="text-[10px] text-muted-foreground uppercase font-bold tracking-wider">
-                  System Status
-                </div>
-                <div className="text-sm font-semibold text-foreground">100% Verfügbar</div>
-              </div>
-            </div>
-          </div>
-
-          <div className="absolute -top-4 -right-3 sm:-right-5 px-3 py-2 bg-background border border-border rounded-md shadow-sm hidden sm:flex items-center gap-2">
-            <span className="relative flex h-2 w-2">
-              <span className="absolute inline-flex h-full w-full rounded-full bg-primary opacity-60 animate-ping" />
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-primary" />
-            </span>
-            <span className="text-[11px] font-mono text-foreground/80">deploy · prod</span>
+        {/* Photo */}
+        <div className="hero-animate hero-animate-3 relative lg:h-[min(84vh,780px)]">
+          <div className="relative h-[62vw] sm:h-[46vw] lg:h-full min-h-[340px] overflow-hidden rounded-t-lg lg:rounded-none lg:rounded-tl-lg bg-muted photo-tint">
+            <img
+              src={photos.teamHero}
+              alt="Entwicklungsteam bei der gemeinsamen Arbeit an einer Softwarelösung"
+              loading="eager"
+              fetchPriority="high"
+              draggable={false}
+              onContextMenu={(e) => e.preventDefault()}
+              className="absolute inset-0 h-full w-full object-cover"
+            />
           </div>
         </div>
       </div>
-    </section>
-  );
-};
+    </div>
+  </section>
+);
 
 export default HeroSplit;

@@ -1,43 +1,53 @@
-import { useScrollAnimation } from '@/hooks/useScrollAnimation';
-import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { ArrowUpRight } from 'lucide-react';
+import { photos } from '@/assets/photos';
+import Photo from '@/components/site/Photo';
+import Reveal from '@/components/site/Reveal';
 
-const CTASection = () => {
-  const { ref, isVisible } = useScrollAnimation();
-
-  return (
-    <section id="kontakt" ref={ref} className="py-24 md:py-32 bg-gradient-blue relative overflow-hidden">
-      {/* Orbs */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-0 left-1/4 w-72 h-72 rounded-full bg-white/[0.05] blur-3xl" />
-        <div className="absolute bottom-0 right-1/4 w-56 h-56 rounded-full bg-white/[0.05] blur-3xl" />
-      </div>
-
-      <div className="max-w-3xl mx-auto px-6 text-center relative z-10">
-        <div className={`scroll-hidden ${isVisible ? 'scroll-visible' : ''}`}>
-          <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight mb-6 text-primary-foreground">
-            Entwicklungsauftrag besprechen?
+const CTASection = () => (
+  <section className="bg-surface">
+    <div className="max-w-7xl mx-auto px-5 sm:px-8 py-20 sm:py-28">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+        <Reveal>
+          <Photo
+            src={photos.teamMeeting}
+            alt="Entwicklungsteam bespricht einen Auftrag im Besprechungsraum"
+            ratio="aspect-[4/3]"
+          />
+        </Reveal>
+        <Reveal delay={2}>
+          <p className="font-mono text-[11px] uppercase tracking-[0.22em] text-primary">
+            Nächster Schritt
+          </p>
+          <h2 className="mt-6 font-display text-[2rem] sm:text-[2.8rem] font-semibold leading-[1.05]">
+            Umfang klären, Aufwand einschätzen, starten.
           </h2>
-        </div>
-        <p className={`scroll-hidden delay-1 ${isVisible ? 'scroll-visible' : ''} text-lg text-white/80 max-w-xl mx-auto mb-10`}>
-          Schildern Sie uns Ihr Vorhaben — wir bewerten Umfang, Aufwand und
-          Umsetzungsweg der Auftragsentwicklung.
-        </p>
-        <div className={`scroll-hidden delay-2 ${isVisible ? 'scroll-visible' : ''}`}>
-          <Link
-            to="/kontakt"
-            className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-white text-foreground font-semibold text-base hover:bg-white/90 transition-all duration-200 shadow-lg hover:shadow-xl"
-          >
-            Kontakt aufnehmen
-            <ArrowRight size={18} />
-          </Link>
-        </div>
-        <p className={`scroll-hidden delay-3 ${isVisible ? 'scroll-visible' : ''} mt-6 text-sm text-white/60`}>
-          Leistungen ausschließlich für verbundene Unternehmen.
-        </p>
+          <p className="mt-5 text-muted-foreground leading-relaxed max-w-xl">
+            Beschreiben Sie das Vorhaben und die bestehende Systemlandschaft. Wir bewerten
+            Machbarkeit und Aufwand und schlagen ein Vorgehen für den Entwicklungsauftrag vor.
+          </p>
+          <div className="mt-9 flex flex-wrap gap-3">
+            <Link
+              to="/kontakt"
+              className="group inline-flex items-center gap-2 h-12 px-6 rounded-full bg-primary text-primary-foreground font-semibold hover:bg-primary/90 transition-colors"
+            >
+              Anfrage stellen
+              <ArrowUpRight
+                size={17}
+                className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+              />
+            </Link>
+            <Link
+              to="/prozess"
+              className="inline-flex items-center h-12 px-6 rounded-full border border-border text-foreground font-semibold hover:border-primary/50 hover:text-primary transition-colors"
+            >
+              Ablauf ansehen
+            </Link>
+          </div>
+        </Reveal>
       </div>
-    </section>
-  );
-};
+    </div>
+  </section>
+);
 
 export default CTASection;
