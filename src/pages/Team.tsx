@@ -137,30 +137,6 @@ const Team = () => {
         imageAlt="Teambesprechung im Berliner Büro"
       />
 
-      {/* Photo band */}
-      <section className="bg-background">
-        <div className="max-w-7xl mx-auto px-5 sm:px-8 pt-16 sm:pt-20">
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-            <Reveal>
-              <Photo src={photos.officeOpenSpace} alt="Offener Arbeitsbereich" ratio="aspect-[3/4]" />
-            </Reveal>
-            <Reveal delay={2}>
-              <Photo
-                src={photos.collaborationHands}
-                alt="Gemeinsame Abstimmung am Tisch"
-                ratio="aspect-[3/4]"
-              />
-            </Reveal>
-            <Reveal delay={3}>
-              <Photo
-                src={photos.pairProgramming}
-                alt="Pair Programming im Entwicklungsteam"
-                ratio="aspect-[3/4]"
-              />
-            </Reveal>
-          </div>
-        </div>
-      </section>
 
       <section className="bg-background">
         <div className="max-w-7xl mx-auto px-5 sm:px-8 py-20 sm:py-28">
