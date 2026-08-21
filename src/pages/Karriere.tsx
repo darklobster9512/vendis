@@ -1,78 +1,90 @@
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { MapPin, ArrowRight } from 'lucide-react';
+import { ArrowUpRight } from 'lucide-react';
 
 import PageHero from '@/components/landing/PageHero';
 import Footer from '@/components/landing/Footer';
+import Reveal from '@/components/site/Reveal';
+import SectionHead from '@/components/site/SectionHead';
+import { photos } from '@/assets/photos';
 import { stellen } from '@/data/karriereStellen';
 
 const Karriere = () => {
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => entries.forEach((e) => e.isIntersecting && e.target.classList.add('scroll-visible')),
-      { threshold: 0.1 }
-    );
-    document.querySelectorAll('.scroll-hidden').forEach((el) => observer.observe(el));
-    return () => observer.disconnect();
+    document.title = 'Karriere | Vendis Development Services GmbH';
   }, []);
 
   return (
     <>
-
       <PageHero
         eyebrow="Karriere"
         title="Karriere bei"
         highlight="Vendis Development Services"
         subtitle="Werde Teil unseres Teams in Softwareentwicklung, Qualitätssicherung oder Betrieb. Wir suchen Menschen, die Softwarelösungen zuverlässig umsetzen und weiterentwickeln."
-        breadcrumb={[
-          { label: 'Home', href: '/' },
-          { label: 'Karriere' },
-        ]}
+        breadcrumb={[{ label: 'Home', href: '/' }, { label: 'Karriere' }]}
+        image={photos.officeOpenSpace}
+        imageAlt="Arbeitsatmosphäre im Berliner Büro"
       />
 
-      <section className="py-20">
-        <div className="max-w-4xl mx-auto px-6">
-          <div className="space-y-5">
+      <section className="bg-background">
+        <div className="max-w-7xl mx-auto px-5 sm:px-8 py-20 sm:py-28">
+          <SectionHead
+            index="§ 01"
+            label="Offene Stellen"
+            title="Aktuelle Positionen."
+            text="Alle Rollen sind Teil unserer Auftragsentwicklung für verbundene Unternehmen."
+          />
+
+          <ul className="mt-14">
             {stellen.map((stelle, i) => (
-              <Link
-                key={stelle.slug}
-                to={`/karriere/${stelle.slug}`}
-                className={`scroll-hidden delay-${i + 1} group block rounded-2xl border border-border/60 bg-card p-6 md:p-8 hover:border-primary/30 hover:shadow-lg hover:shadow-primary/5 transition-all duration-300`}
-              >
-                <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
-                  <div className="space-y-2">
-                    <h3 className="text-lg font-bold text-foreground group-hover:text-primary transition-colors">
+              <Reveal as="li" key={stelle.slug} delay={((i % 4) + 1) as 1 | 2 | 3 | 4}>
+                <Link
+                  to={`/karriere/${stelle.slug}`}
+                  className="group grid grid-cols-1 lg:grid-cols-[minmax(0,3fr)_minmax(0,2fr)_auto] items-start gap-6 border-t border-border py-8 transition-colors hover:bg-surface/60"
+                >
+                  <div>
+                    <span className="font-mono text-[11px] tracking-[0.22em] text-primary">
+                      {String(i + 1).padStart(2, '0')}
+                    </span>
+                    <h3 className="mt-3 font-display text-xl sm:text-2xl font-semibold leading-tight group-hover:text-primary transition-colors">
                       {stelle.titel}
                     </h3>
-                    <div className="flex flex-wrap items-center gap-3 text-sm text-muted-foreground">
-                      <span className="flex items-center gap-1.5">
-                        <MapPin size={14} />
-                        {stelle.standort}
-                      </span>
-                      <span className="px-2.5 py-0.5 rounded-full bg-accent text-accent-foreground text-xs font-medium">
-                        {stelle.modell}
-                      </span>
-                      {stelle.stundenlohn && (
-                        <span className="px-2.5 py-0.5 rounded-full bg-accent text-accent-foreground text-xs font-medium">
-                          {stelle.stundenlohn}/h
-                        </span>
-                      )}
+                    <div className="mt-3 flex flex-wrap gap-x-4 gap-y-1 font-mono text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
+                      <span>{stelle.standort}</span>
+                      <span>{stelle.modell}</span>
+                      {stelle.stundenlohn && <span>{stelle.stundenlohn}/h</span>}
                     </div>
+                  </div>
 
-                    <p className="text-sm text-muted-foreground leading-relaxed max-w-xl">
-                      {stelle.kurzbeschreibung}
-                    </p>
-                  </div>
-                  <div className="shrink-0">
-                    <span className="inline-flex items-center gap-1.5 text-sm font-semibold text-primary group-hover:gap-2.5 transition-all">
-                      Details ansehen
-                      <ArrowRight size={15} />
-                    </span>
-                  </div>
-                </div>
-              </Link>
+                  <p className="text-sm text-muted-foreground leading-relaxed lg:pt-9">
+                    {stelle.kurzbeschreibung}
+                  </p>
+
+                  <span className="inline-flex items-center gap-2 font-mono text-[11px] uppercase tracking-[0.16em] text-primary lg:pt-10">
+                    Details
+                    <ArrowUpRight
+                      size={15}
+                      className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                    />
+                  </span>
+                </Link>
+              </Reveal>
             ))}
-          </div>
+          </ul>
+
+          <Reveal className="border-t border-border pt-8">
+            <p className="max-w-2xl text-sm text-muted-foreground leading-relaxed">
+              Keine passende Position dabei? Initiativbewerbungen sind jederzeit willkommen —
+              schreiben Sie uns an{' '}
+              <a
+                href="mailto:kontakt@vendis-development.de"
+                className="text-primary hover:underline"
+              >
+                kontakt@vendis-development.de
+              </a>
+              .
+            </p>
+          </Reveal>
         </div>
       </section>
 
