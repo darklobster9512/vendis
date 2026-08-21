@@ -46,16 +46,17 @@ const Navbar = () => {
             scrolled ? 'h-16' : 'h-20 sm:h-24'
           }`}
         >
-          <Link to="/" className="shrink-0 flex items-center">
-            <img
-              src={logo}
-              alt="Vendis Development Services"
-              loading="eager"
-              fetchPriority="high"
-              draggable={false}
-              className={`w-auto object-contain transition-all duration-300 ${scrolled ? 'h-5' : 'h-6'}`}
-            />
+          <Link to="/" className="shrink-0 flex items-baseline gap-1" aria-label="Vendis Development Services — Startseite">
+            <span
+              className={`font-display font-semibold tracking-[-0.03em] leading-none transition-all duration-300 ${
+                scrolled ? 'text-xl' : 'text-[1.6rem]'
+              }`}
+            >
+              vendis
+            </span>
+            <span className="text-primary text-2xl leading-none">.</span>
           </Link>
+
 
           <nav className="hidden lg:flex items-center gap-9 mx-auto">
             {navLinks.map((link) => {
