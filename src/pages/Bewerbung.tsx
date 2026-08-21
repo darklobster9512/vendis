@@ -4,7 +4,10 @@ import { Send, Loader2 } from 'lucide-react';
 
 import PageHero from '@/components/landing/PageHero';
 import Footer from '@/components/landing/Footer';
-import { useScrollAnimation } from '@/hooks/useScrollAnimation';
+import Reveal from '@/components/site/Reveal';
+import SectionHead from '@/components/site/SectionHead';
+import Photo from '@/components/site/Photo';
+import { photos } from '@/assets/photos';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import {
@@ -25,7 +28,6 @@ const ANON_KEY =
 const Bewerbung = () => {
   const [searchParams] = useSearchParams();
   const preselected = searchParams.get('stelle') || '';
-  const { ref, isVisible } = useScrollAnimation();
 
   const [form, setForm] = useState({
     vorname: '',
@@ -71,7 +73,6 @@ const Bewerbung = () => {
       const data = await res.json();
 
       if (data.success) {
-        // Meta Pixel Lead conversion
         (window as any).fbq?.('track', 'Lead');
         toast({ title: 'Bewerbung erfolgreich gesendet!', description: 'Wir melden uns bei dir.' });
         setForm({ vorname: '', nachname: '', email: '', telefon: '', stelle: '', anstellungsart: '' });
@@ -88,6 +89,7 @@ const Bewerbung = () => {
   return (
     <>
       <PageHero
+        eyebrow="Bewerbung"
         title="Deine"
         highlight="Bewerbung"
         subtitle="Fülle das Formular aus und bewirb dich auf eine unserer offenen Stellen. Wir freuen uns darauf, dich kennenzulernen."
@@ -98,89 +100,100 @@ const Bewerbung = () => {
         ]}
       />
 
-      <section ref={ref} className="py-20">
-        <div className="max-w-2xl mx-auto px-6">
-          <div className={`scroll-hidden ${isVisible ? 'scroll-visible' : ''} rounded-2xl border border-border/60 bg-card p-8 md:p-10`}>
-            <h2 className="text-2xl font-extrabold tracking-tight mb-2">Bewerbungsformular</h2>
-            <p className="text-sm text-muted-foreground mb-8">
-              Felder mit * sind Pflichtfelder.
-            </p>
-
-            <form onSubmit={handleSubmit} className="space-y-5">
-              {/* Stelle (UI only) */}
-              <div className="space-y-2">
-                <Label htmlFor="stelle">Stelle</Label>
-                <Select value={form.stelle} onValueChange={(v) => setForm({ ...form, stelle: v })}>
-                  <SelectTrigger className="rounded-xl">
-                    <SelectValue placeholder="Stelle auswählen" />
-                  </SelectTrigger>
-                  <SelectContent>
-                    {stellen.map((s) => (
-                      <SelectItem key={s.slug} value={s.titel}>
-                        {s.titel}
-                      </SelectItem>
-                    ))}
-                  </SelectContent>
-                </Select>
+      <section className="bg-background">
+        <div className="max-w-7xl mx-auto px-5 sm:px-8 py-20 sm:py-28">
+          <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,380px)_minmax(0,1fr)] gap-14 lg:gap-20">
+            <div>
+              <div className="lg:sticky lg:top-28">
+                <SectionHead
+                  index="§ 01"
+                  label="Bewerbungsformular"
+                  title="In zwei Minuten bewerben."
+                  text="Felder mit * sind Pflichtfelder. Unterlagen kannst du uns im Anschluss per E-Mail nachreichen."
+                />
+                <Reveal delay={3} className="mt-10 hidden lg:block">
+                  <Photo
+                    src={photos.collaborationHands}
+                    alt="Zusammenarbeit im Team"
+                    ratio="aspect-[4/3]"
+                  />
+                </Reveal>
               </div>
+            </div>
 
-              {/* Anstellungsart */}
-              <div className="space-y-2">
-                <Label htmlFor="anstellungsart">Anstellungsart *</Label>
-                <Select value={form.anstellungsart} onValueChange={(v) => setForm({ ...form, anstellungsart: v })}>
-                  <SelectTrigger className="rounded-xl">
-                    <SelectValue placeholder="Anstellungsart wählen" />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="minijob">Minijob</SelectItem>
-                    <SelectItem value="teilzeit">Teilzeit</SelectItem>
-                    
-                  </SelectContent>
-                </Select>
-              </div>
+            <Reveal delay={2}>
+              <form onSubmit={handleSubmit} className="space-y-6">
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div className="space-y-2">
+                    <Label htmlFor="stelle">Stelle</Label>
+                    <Select value={form.stelle} onValueChange={(v) => setForm({ ...form, stelle: v })}>
+                      <SelectTrigger id="stelle">
+                        <SelectValue placeholder="Stelle auswählen" />
+                      </SelectTrigger>
+                      <SelectContent>
+                        {stellen.map((s) => (
+                          <SelectItem key={s.slug} value={s.titel}>
+                            {s.titel}
+                          </SelectItem>
+                        ))}
+                      </SelectContent>
+                    </Select>
+                  </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="anstellungsart">Anstellungsart *</Label>
+                    <Select value={form.anstellungsart} onValueChange={(v) => setForm({ ...form, anstellungsart: v })}>
+                      <SelectTrigger id="anstellungsart">
+                        <SelectValue placeholder="Anstellungsart wählen" />
+                      </SelectTrigger>
+                      <SelectContent>
+                        <SelectItem value="minijob">Minijob</SelectItem>
+                        <SelectItem value="teilzeit">Teilzeit</SelectItem>
+                      </SelectContent>
+                    </Select>
+                  </div>
+                </div>
 
-              {/* Name */}
-              <div className="grid md:grid-cols-2 gap-5">
-                <div className="space-y-2">
-                  <Label htmlFor="vorname">Vorname *</Label>
-                  <Input id="vorname" name="vorname" placeholder="Max" value={form.vorname} onChange={handleChange} className="rounded-xl" />
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div className="space-y-2">
+                    <Label htmlFor="vorname">Vorname *</Label>
+                    <Input id="vorname" name="vorname" placeholder="Max" value={form.vorname} onChange={handleChange} />
+                  </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="nachname">Nachname *</Label>
+                    <Input id="nachname" name="nachname" placeholder="Mustermann" value={form.nachname} onChange={handleChange} />
+                  </div>
                 </div>
-                <div className="space-y-2">
-                  <Label htmlFor="nachname">Nachname *</Label>
-                  <Input id="nachname" name="nachname" placeholder="Mustermann" value={form.nachname} onChange={handleChange} className="rounded-xl" />
-                </div>
-              </div>
 
-              {/* Contact */}
-              <div className="grid md:grid-cols-2 gap-5">
-                <div className="space-y-2">
-                  <Label htmlFor="email">E-Mail *</Label>
-                  <Input id="email" name="email" type="email" placeholder="max@beispiel.de" value={form.email} onChange={handleChange} className="rounded-xl" />
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div className="space-y-2">
+                    <Label htmlFor="email">E-Mail *</Label>
+                    <Input id="email" name="email" type="email" placeholder="max@beispiel.de" value={form.email} onChange={handleChange} />
+                  </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="telefon">Telefon *</Label>
+                    <Input id="telefon" name="telefon" type="tel" placeholder="030 123456789" value={form.telefon} onChange={handleChange} />
+                  </div>
                 </div>
-                <div className="space-y-2">
-                  <Label htmlFor="telefon">Telefon *</Label>
-                  <Input id="telefon" name="telefon" type="tel" placeholder="030 123456789" value={form.telefon} onChange={handleChange} className="rounded-xl" />
-                </div>
-              </div>
 
-              <button
-                type="submit"
-                disabled={submitting}
-                className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full bg-gradient-blue text-primary-foreground font-semibold text-sm shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/35 hover:scale-[1.02] transition-all duration-200 disabled:opacity-50 disabled:pointer-events-none"
-              >
-                {submitting ? (
-                  <>
-                    Wird gesendet…
-                    <Loader2 size={16} className="animate-spin" />
-                  </>
-                ) : (
-                  <>
-                    Bewerbung absenden
-                    <Send size={16} />
-                  </>
-                )}
-              </button>
-            </form>
+                <button
+                  type="submit"
+                  disabled={submitting}
+                  className="inline-flex items-center gap-2 rounded-md bg-primary px-8 py-3.5 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary/90 disabled:opacity-50 disabled:pointer-events-none"
+                >
+                  {submitting ? (
+                    <>
+                      Wird gesendet…
+                      <Loader2 size={16} className="animate-spin" />
+                    </>
+                  ) : (
+                    <>
+                      Bewerbung absenden
+                      <Send size={16} />
+                    </>
+                  )}
+                </button>
+              </form>
+            </Reveal>
           </div>
         </div>
       </section>
