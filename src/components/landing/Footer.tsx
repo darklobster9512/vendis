@@ -54,11 +54,13 @@ const Footer = () => (
       {/* Link grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 py-14">
         <div>
-          <Link to="/" className="inline-flex items-baseline gap-[1px]" aria-label="Vendis Development Services — Startseite">
-            <span className="font-display text-2xl font-semibold tracking-[-0.03em] leading-none text-ink-foreground">
-              vendis
-            </span>
-            <span className="text-primary text-2xl leading-none">.</span>
+          <Link to="/" className="inline-flex items-center" aria-label="Vendis Development Services — Startseite">
+            <img
+              src={vendisLogo.url}
+              alt="Vendis Development Services"
+              className="h-8 w-auto invert"
+              draggable={false}
+            />
           </Link>
 
           <p className="mt-5 text-sm text-ink-foreground/55 leading-relaxed max-w-xs">
