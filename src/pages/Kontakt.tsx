@@ -5,7 +5,7 @@ import Footer from '@/components/landing/Footer';
 import Reveal from '@/components/site/Reveal';
 import SectionHead from '@/components/site/SectionHead';
 import Photo from '@/components/site/Photo';
-import { photos } from '@/assets/photos';
+import { photos } from '@/lib/photos';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';

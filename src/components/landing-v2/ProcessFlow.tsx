@@ -1,4 +1,4 @@
-import { photos } from '@/assets/photos';
+import { photos } from '@/lib/photos';
 import Reveal from '@/components/site/Reveal';
 import SectionHead from '@/components/site/SectionHead';
 import Photo from '@/components/site/Photo';

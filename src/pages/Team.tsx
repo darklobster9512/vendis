@@ -5,7 +5,7 @@ import CTASection from '@/components/landing/CTASection';
 import Footer from '@/components/landing/Footer';
 import Reveal from '@/components/site/Reveal';
 import SectionHead from '@/components/site/SectionHead';
-import { photos } from '@/assets/photos';
+import { photos } from '@/lib/photos';
 
 const departments = [
   {

@@ -7,7 +7,7 @@ import SectionHead from '@/components/site/SectionHead';
 import SplitRow from '@/components/site/SplitRow';
 import Reveal from '@/components/site/Reveal';
 import TickList from '@/components/site/TickList';
-import { photos } from '@/assets/photos';
+import { photos } from '@/lib/photos';
 
 const capabilities = [
   {

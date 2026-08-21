@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { ArrowUpRight } from 'lucide-react';
-import { photos } from '@/assets/photos';
+import { photos } from '@/lib/photos';
 import SectionHead from '@/components/site/SectionHead';
 import SplitRow from '@/components/site/SplitRow';
 import TickList from '@/components/site/TickList';

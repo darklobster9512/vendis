@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, ArrowUpRight } from 'lucide-react';
-import vendisLogo from '@/assets/vendis-logo.png.asset.json';
+const vendisLogo = { url: '/images/vendis-logo.png' };
 
 const navLinks = [
   { label: 'Entwicklung', href: '/entwicklung' },

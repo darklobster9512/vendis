@@ -8,7 +8,7 @@ import Footer from '@/components/landing/Footer';
 import SplitRow from '@/components/site/SplitRow';
 import TickList from '@/components/site/TickList';
 import Reveal from '@/components/site/Reveal';
-import { photos } from '@/assets/photos';
+import { photos } from '@/lib/photos';
 
 const services = [
   {

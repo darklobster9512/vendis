@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { ArrowUpRight } from 'lucide-react';
-import vendisLogo from '@/assets/vendis-logo.png.asset.json';
+const vendisLogo = { url: '/images/vendis-logo.png' };
 
 const columns = [
   {

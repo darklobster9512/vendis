@@ -1,14 +1,14 @@
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 
-import reactIcon from '@/assets/tech/react.svg';
-import nodejsIcon from '@/assets/tech/nodejs.svg';
-import pythonIcon from '@/assets/tech/python.svg';
-import postgresqlIcon from '@/assets/tech/postgresql.svg';
-import phpIcon from '@/assets/tech/php.svg';
-import html5Icon from '@/assets/tech/html5.svg';
-import css3Icon from '@/assets/tech/css3.svg';
-import nextjsIcon from '@/assets/tech/nextjs.svg';
-import csharpIcon from '@/assets/tech/csharp.svg';
+const reactIcon = '/images/tech/react.svg';
+const nodejsIcon = '/images/tech/nodejs.svg';
+const pythonIcon = '/images/tech/python.svg';
+const postgresqlIcon = '/images/tech/postgresql.svg';
+const phpIcon = '/images/tech/php.svg';
+const html5Icon = '/images/tech/html5.svg';
+const css3Icon = '/images/tech/css3.svg';
+const nextjsIcon = '/images/tech/nextjs.svg';
+const csharpIcon = '/images/tech/csharp.svg';
 
 const techStack = [
   { name: 'React', icon: reactIcon },
