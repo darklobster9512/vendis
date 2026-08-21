@@ -55,8 +55,8 @@ const Impressum = () => {
             </a>
             <br />
             Telefon:{' '}
-            <a href="tel:+4930123456789" className="text-primary hover:underline">
-              030 123456789
+            <a href="tel:+4930692095650" className="text-primary hover:underline">
+              030 692095650
             </a>
             <br />
             Website:{' '}

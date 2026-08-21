@@ -139,8 +139,8 @@ const Navbar = () => {
         </nav>
 
         <div className="px-5 pt-10 space-y-1 text-sm text-ink-foreground/60">
-          <a href="tel:+4930123456789" className="block hover:text-ink-foreground transition-colors">
-            030 123456789
+          <a href="tel:+4930692095650" className="block hover:text-ink-foreground transition-colors">
+            030 692095650
           </a>
           <a
             href="mailto:kontakt@vendis-development.de"

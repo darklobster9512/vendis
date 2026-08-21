@@ -18,7 +18,7 @@ import {
 import { Send } from 'lucide-react';
 
 const contactInfo = [
-  { label: 'Telefon', value: '030 123456789', href: 'tel:+4930123456789' },
+  { label: 'Telefon', value: '030 692095650', href: 'tel:+4930692095650' },
   {
     label: 'E-Mail',
     value: 'kontakt@vendis-development.de',
@@ -153,7 +153,7 @@ const Kontakt = () => {
                 <div className="grid md:grid-cols-2 gap-6">
                   <div className="space-y-2">
                     <Label htmlFor="phone">Telefon</Label>
-                    <Input id="phone" name="phone" type="tel" placeholder="030 123456789" value={form.phone} onChange={handleChange} />
+                    <Input id="phone" name="phone" type="tel" placeholder="030 692095650" value={form.phone} onChange={handleChange} />
                   </div>
                   <div className="space-y-2">
                     <Label htmlFor="subject">Betreff *</Label>
