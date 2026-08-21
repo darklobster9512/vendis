@@ -15,7 +15,7 @@ const Impressum = () => {
       />
 
       <section className="bg-background">
-        <div className="max-w-3xl mx-auto px-5 sm:px-8 py-20 sm:py-28 prose prose-neutral max-w-none prose-headings:font-display prose-headings:font-semibold prose-p:text-muted-foreground prose-p:leading-relaxed">
+        <div className="max-w-3xl mx-auto px-5 sm:px-8 py-20 sm:py-28 prose prose-neutral prose-headings:font-display prose-headings:font-semibold prose-p:text-muted-foreground prose-p:leading-relaxed">
           <h2 className="font-display text-3xl sm:text-4xl font-semibold tracking-tight mb-6 mt-0 border-t border-border pt-8">Angaben gemäß § 5 TMG</h2>
 
           <p>
