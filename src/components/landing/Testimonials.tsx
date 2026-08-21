@@ -3,7 +3,7 @@ import { Quote, Star } from 'lucide-react';
 
 const testimonials = [
   {
-    quote: 'for.tel Solutions hat unsere Kommunikationsinfrastruktur grundlegend digitalisiert und die internen Prozesse so optimiert, dass wir deutlich schneller und effizienter agieren können.',
+    quote: 'Vendis Development Services hat unsere Kommunikationsinfrastruktur grundlegend digitalisiert und die internen Prozesse so optimiert, dass wir deutlich schneller und effizienter agieren können.',
     name: 'Peter Kurt Nowack',
     role: 'CEO',
     company: 'Gamma Placetel GmbH',

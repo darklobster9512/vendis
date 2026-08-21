@@ -27,7 +27,7 @@ const services: Service[] = [
     title: 'Individualsoftware',
     icon: Code2,
     summary:
-      'Maßgeschneiderte Business-Anwendungen, die exakt zu Ihren Prozessen passen — vom Prototyp bis zur produktiven Lösung.',
+      'Business-Anwendungen für die Prozesse der beauftragenden Gesellschaft — von der Analyse bis zur produktiven Lösung.',
     bullets: [
       'ERP- & CRM-Integrationen',
       'APIs & Schnittstellen',
@@ -79,16 +79,16 @@ const services: Service[] = [
     tech: ['OpenAI', 'Azure AI', 'LangChain', 'pgvector'],
   },
   {
-    eyebrow: '05 / Beratung',
-    title: 'IT- & Technologieberatung',
+    eyebrow: '05 / Bewertung',
+    title: 'Technische Bewertung',
     icon: Compass,
     summary:
-      'Unabhängige Einschätzung statt Produktverkauf — wir prüfen Architektur, Anbieter und Wirtschaftlichkeit.',
+      'Technische Bewertung von Architektur, Umsetzbarkeit und Aufwand — als vorbereitende Leistung zur Auftragsentwicklung.',
     bullets: [
       'Architektur- & Code-Reviews',
-      'Make-or-Buy-Analysen',
-      'Lastenhefte & Anbietervergleich',
-      'Technische Due Diligence',
+      'Machbarkeits- und Aufwandsanalysen',
+      'Lastenhefte & technische Konzepte',
+      'Technische Risikobewertung',
     ],
     tech: ['Architektur', 'Audit', 'Strategie'],
   },
@@ -97,11 +97,11 @@ const services: Service[] = [
     title: 'Projektmanagement',
     icon: ListChecks,
     summary:
-      'Termine, Budget, Qualität — verantwortlich gesteuert. Agil oder klassisch, je nach Vorhaben.',
+      'Termine, Umfang und Qualität je Entwicklungsauftrag — agil oder klassisch, je nach Vorhaben.',
     bullets: [
       'Scrum, Kanban & Hybrid-Modelle',
       'Stakeholder- & Risikomanagement',
-      'Reporting an Geschäftsführung',
+      'Reporting an den Auftraggeber',
       'Übergabe & Betriebsführung',
     ],
     tech: ['Scrum', 'Kanban', 'PRINCE2'],
@@ -144,11 +144,11 @@ const ServicesTabs = () => {
               Leistungen
             </p>
             <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold leading-[1.1] tracking-tight max-w-3xl">
-              Sechs Disziplinen, ein verantwortliches Team.
+              Sechs Disziplinen entlang des Software-Lebenszyklus.
             </h2>
           </div>
           <Link
-            to="/leistungen"
+            to="/entwicklung"
             className="group inline-flex items-center gap-2 text-sm font-semibold text-primary self-start lg:self-end hover:gap-3 transition-all"
           >
             Alle Leistungen <ArrowUpRight size={16} />
@@ -275,7 +275,7 @@ const ServicesTabs = () => {
                 </div>
 
                 <Link
-                  to="/leistungen"
+                  to="/entwicklung"
                   className="mt-8 inline-flex items-center gap-2 text-sm font-semibold text-primary hover:gap-3 transition-all"
                 >
                   Mehr zu dieser Leistung <ArrowUpRight size={16} />

@@ -10,10 +10,11 @@ const Footer = () => {
           {/* Logo + Tagline */}
           <div>
             <Link to="/" className="flex items-center mb-4">
-              <img src={logo} alt="for.tel Solutions" className="h-5 hover:scale-105 transition-transform duration-200" />
+              <img src={logo} alt="Vendis Development Services" className="h-5 hover:scale-105 transition-transform duration-200" />
             </Link>
             <p className="text-sm text-muted-foreground leading-relaxed">
-              Technische Beratung, Projektmanagement, Personalberatung und Anlagenplanung — aus einer Hand, seit 2006.
+              Auftragsentwicklung für verbundene Unternehmen — Analyse, Design,
+              Implementierung, Test, Wartung und Betriebs-Support von Softwarelösungen.
             </p>
           </div>
 
@@ -22,7 +23,7 @@ const Footer = () => {
             <h4 className="font-semibold text-sm mb-4 text-foreground">Unternehmen</h4>
             <ul className="space-y-2.5">
               {[
-                { label: 'Methodik', href: '/methodik' },
+                { label: 'Prozess', href: '/prozess' },
                 { label: 'Team', href: '/team' },
                 { label: 'Karriere', href: '/karriere' },
                 { label: 'Kontakt', href: '/kontakt' },
@@ -41,10 +42,11 @@ const Footer = () => {
             <h4 className="font-semibold text-sm mb-4 text-foreground">Leistungen</h4>
             <ul className="space-y-2.5">
               {[
-                { label: 'Technische Beratung', href: '/leistungen' },
-                { label: 'Projektmanagement', href: '/leistungen' },
-                { label: 'Personalberatung', href: '/leistungen' },
-                { label: 'Anlagenplanung', href: '/software' },
+                { label: 'Analyse & Spezifikation', href: '/entwicklung#analyse' },
+                { label: 'Architektur & Implementierung', href: '/entwicklung#implementierung' },
+                { label: 'Test & Qualitätssicherung', href: '/entwicklung#test' },
+                { label: 'Wartung & Betriebs-Support', href: '/entwicklung#betrieb' },
+                { label: 'Technologien', href: '/technologien' },
               ].map((link, i) => (
                 <li key={i}>
                   <Link to={link.href} className="text-sm text-muted-foreground hover:text-primary transition-colors">
@@ -55,25 +57,26 @@ const Footer = () => {
             </ul>
           </div>
 
+
           {/* Kontakt */}
           <div>
             <h4 className="font-semibold text-sm mb-4 text-foreground">Kontakt</h4>
             <ul className="space-y-3 text-sm text-muted-foreground">
               <li>
-                <a href="mailto:kontakt@for-tel.com" className="flex items-center gap-2 hover:text-primary transition-colors">
+                <a href="mailto:kontakt@vendis-development.de" className="flex items-center gap-2 hover:text-primary transition-colors">
                   <Mail className="h-4 w-4 text-primary/70 shrink-0" />
-                  kontakt@for-tel.com
+                  kontakt@vendis-development.de
                 </a>
               </li>
               <li>
-                <a href="tel:+4921186943272" className="flex items-center gap-2 hover:text-primary transition-colors">
+                <a href="tel:+4930123456789" className="flex items-center gap-2 hover:text-primary transition-colors">
                   <Phone className="h-4 w-4 text-primary/70 shrink-0" />
-                  +49 211-86943272
+                  030 123456789
                 </a>
               </li>
               <li className="flex items-start gap-2">
                 <MapPin className="h-4 w-4 text-primary/70 shrink-0 mt-0.5" />
-                <span>Hornbergstr. 35<br />70794 Filderstadt</span>
+                <span>Neue Schönhauser Str. 2<br />10178 Berlin</span>
               </li>
             </ul>
           </div>
@@ -84,7 +87,7 @@ const Footer = () => {
       <div className="border-t border-border/50 bg-muted/30">
         <div className="max-w-7xl mx-auto px-5 sm:px-6 py-6 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-xs text-muted-foreground">
-            © {new Date().getFullYear()} for.tel Solutions GmbH. Alle Rechte vorbehalten.
+            © {new Date().getFullYear()} Vendis Development Services GmbH. Alle Rechte vorbehalten.
           </p>
           <div className="flex items-center gap-6">
             <Link to="/impressum" className="text-xs text-muted-foreground hover:text-primary transition-colors">Impressum</Link>

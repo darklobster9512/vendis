@@ -17,7 +17,7 @@ export const stellen: Stelle[] = [
   {
     slug: 'onlineprozess-tests',
     titel: 'Mitarbeiter (m/w/d) für Onlineprozess-Tests',
-    standort: 'Filderstadt',
+    standort: 'Berlin',
     modell: 'Remote / Minijob / Teilzeit',
     arbeitszeit: 'Flexibel (ca. 5–30 Std./Woche)',
     stundenlohn: '29 €',
@@ -51,7 +51,7 @@ export const stellen: Stelle[] = [
   {
     slug: 'softwareentwicklung',
     titel: 'Mitarbeiter (m/w/d) für Softwareentwicklung',
-    standort: 'Filderstadt',
+    standort: 'Berlin',
     modell: 'Remote',
     kurzbeschreibung:
       'Gestalte die technische Architektur unserer Kundenprojekte und entwickle performante Web-Applikationen von der Konzeption bis zum Go-Live.',
@@ -82,7 +82,7 @@ export const stellen: Stelle[] = [
   {
     slug: 'ux-ui-design',
     titel: 'Mitarbeiter (m/w/d) für UX/UI Design',
-    standort: 'Filderstadt',
+    standort: 'Berlin',
     modell: 'Remote',
     kurzbeschreibung:
       'Verantworte das visuelle und interaktive Erlebnis unserer Softwareprodukte — von User Research über Prototypen bis zur pixelgenauen Umsetzung.',
@@ -113,7 +113,7 @@ export const stellen: Stelle[] = [
   {
     slug: 'devops-cloud-infrastruktur',
     titel: 'Mitarbeiter (m/w/d) für DevOps & Cloud-Infrastruktur',
-    standort: 'Filderstadt',
+    standort: 'Berlin',
     modell: 'Remote',
     kurzbeschreibung:
       'Sorge für eine robuste, skalierbare und sichere Infrastruktur. Automatisiere Deployments und entwickle unsere Cloud-Architektur weiter.',
@@ -144,7 +144,7 @@ export const stellen: Stelle[] = [
   {
     slug: 'werkstudent-digitalisierung',
     titel: 'Werkstudent (m/w/d) im Bereich Digitalisierung',
-    standort: 'Filderstadt',
+    standort: 'Berlin',
     modell: 'Hybrid',
     kurzbeschreibung:
       'Unterstütze unser Team bei der Umsetzung von Kundenprojekten und bekomme Einblick in Beratung, Softwareentwicklung und Projektmanagement.',
@@ -169,7 +169,7 @@ export const stellen: Stelle[] = [
       'Praktische Erfahrung in echten Kundenprojekten',
       'Mentoring durch erfahrene Berater und Entwickler',
       'Übernahmemöglichkeit nach dem Studium',
-      'Modernes Büro in Filderstadt oder Remote-Arbeit',
+      'Modernes Büro in Berlin oder Remote-Arbeit',
     ],
   },
 ];

@@ -15,32 +15,32 @@ import {
 import { Mail, Phone, MapPin, Clock, Send } from 'lucide-react';
 
 const contactInfo = [
-  { icon: Phone, label: 'Telefon', value: '+49 211-86943272', href: 'tel:+4921186943272' },
-  { icon: Mail, label: 'E-Mail', value: 'kontakt@for-tel.com', href: 'mailto:kontakt@for-tel.com' },
-  { icon: MapPin, label: 'Adresse', value: 'Hornbergstr. 35, 70794 Filderstadt', href: undefined },
+  { icon: Phone, label: 'Telefon', value: '030 123456789', href: 'tel:+4930123456789' },
+  { icon: Mail, label: 'E-Mail', value: 'kontakt@vendis-development.de', href: 'mailto:kontakt@vendis-development.de' },
+  { icon: MapPin, label: 'Adresse', value: 'Neue Schönhauser Str. 2, 10178 Berlin', href: undefined },
   { icon: Clock, label: 'Öffnungszeiten', value: 'Mo–Fr · 09:00 – 18:00 Uhr', href: undefined },
 ];
 
 const faqs = [
   {
-    q: 'Wie läuft ein typisches Erstgespräch ab?',
-    a: 'Wir vereinbaren einen 30-minütigen Termin — telefonisch oder vor Ort in Filderstadt. Ziel ist es, Ihr Vorhaben, den zeitlichen Rahmen und mögliche Engpässe zu verstehen. Im Anschluss erhalten Sie eine schriftliche Einschätzung und einen Vorschlag für das weitere Vorgehen. Das Erstgespräch ist kostenfrei und unverbindlich.',
+    q: 'Für wen werden Sie tätig?',
+    a: 'Wir erbringen Softwareentwicklungs- und damit zusammenhängende technische Dienstleistungen als Contract-Developer ausschließlich für verbundene Unternehmen. Eine eigene Vermarktung oder Verwertung der entstehenden Ergebnisse findet nicht statt.',
   },
   {
-    q: 'In welcher Region sind Sie tätig?',
-    a: 'Unser Hauptsitz ist in Filderstadt bei Stuttgart. Projekte realisieren wir im gesamten DACH-Raum — mit Schwerpunkt Baden-Württemberg, Bayern und Hessen. Für überregionale Auftraggeber sind wir bundesweit im Einsatz.',
+    q: 'Wie startet ein Entwicklungsauftrag?',
+    a: 'Am Anfang steht ein kurzes Abstimmungsgespräch zum Vorhaben. Anschließend nehmen wir die Anforderungen auf und erstellen eine technische Spezifikation mit Aufwandsschätzung, Zeitrahmen und Abnahmekriterien.',
   },
   {
-    q: 'Welche Kosten entstehen für eine Erstberatung?',
-    a: 'Das Erstgespräch und die schriftliche Erst­ein­schätzung sind kostenfrei. Konkrete Leistungs­pakete (Anlagenplanung, Projektsteuerung, Personalberatung) kalkulieren wir transparent als Festpreis oder nach Aufwand — abhängig von Umfang und Komplexität.',
+    q: 'Welche Leistungsphasen übernehmen Sie?',
+    a: 'Analyse, Design, Implementierung, Test, Wartung und Betriebs-Support. Wir übernehmen einzelne Phasen oder den gesamten Lebenszyklus einer Softwarelösung — je nach Auftrag.',
   },
   {
-    q: 'Mit welchen Branchen arbeiten Sie?',
-    a: 'Schwerpunkte sind Energieversorgung, Telekommunikation, öffentliche Auftraggeber sowie Industrie- und Infrastrukturprojekte. Unsere Expertise liegt in elektro- und fernmelde­technischen Anlagen, von der Planung bis zur Inbetriebnahme.',
+    q: 'Wem gehören die Arbeitsergebnisse?',
+    a: 'Alle Arbeitsergebnisse stehen dem beauftragenden verbundenen Unternehmen zu. Wir vermarkten oder verwerten sie nicht selbst.',
   },
   {
-    q: 'Wie schnell erhalten wir Personalvorschläge?',
-    a: 'Nach dem Briefing erhalten Sie in der Regel innerhalb von zwei Wochen eine qualifizierte Shortlist. Für spezialisierte Profile (z. B. Bauleitung Fernmeldetechnik) planen wir je nach Markt­situation entsprechend mehr Zeit ein — wir kommunizieren das transparent.',
+    q: 'Wie arbeiten Sie technisch?',
+    a: 'Git-basiert mit Code-Reviews, automatisierten Tests und CI/CD-Pipelines. Releases sind dokumentiert und reproduzierbar; technische Dokumentation gehört zum Lieferumfang.',
   },
 ];
 
@@ -73,7 +73,7 @@ const Kontakt = () => {
         eyebrow="Kontakt"
         title="Kontakt"
         highlight="aufnehmen"
-        subtitle="Beratung, Projektsteuerung, Personal oder Anlagenplanung — sprechen Sie uns an. Wir antworten innerhalb von 24 Stunden an Werktagen."
+        subtitle="Entwicklungsauftrag, Wartung oder Betriebs-Support — schildern Sie uns Ihr Vorhaben. Wir antworten innerhalb von 24 Stunden an Werktagen."
         breadcrumb={[
           { label: 'Home', href: '/' },
           { label: 'Kontakt' },
@@ -152,7 +152,7 @@ const Kontakt = () => {
                 <div className="grid md:grid-cols-2 gap-5">
                   <div className="space-y-2">
                     <Label htmlFor="phone">Telefon</Label>
-                    <Input id="phone" name="phone" type="tel" placeholder="+49 211-86943272" value={form.phone} onChange={handleChange} className="rounded-md" />
+                    <Input id="phone" name="phone" type="tel" placeholder="030 123456789" value={form.phone} onChange={handleChange} className="rounded-md" />
                   </div>
                   <div className="space-y-2">
                     <Label htmlFor="subject">Betreff *</Label>

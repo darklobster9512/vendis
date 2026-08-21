@@ -19,18 +19,18 @@ const Impressum = () => {
           <h2 className="text-2xl font-extrabold tracking-tight mb-6">Angaben gemäß § 5 TMG</h2>
 
           <p>
-            for.tel Solutions GmbH<br />
-            Hornbergstr. 35<br />
-            70794 Filderstadt
+            Vendis Development Services GmbH<br />
+            Neue Schönhauser Str. 2<br />
+            10178 Berlin
           </p>
 
           <h3 className="text-lg font-bold mt-8 mb-3">Vertreten durch</h3>
-          <p>Geschäftsführer: Manfred Beutel</p>
+          <p>Geschäftsführer: Sebastian Andre Deutsch, Thomas Friedrich Witt</p>
 
           <h3 className="text-lg font-bold mt-8 mb-3">Registereintrag</h3>
           <p>
-            Registergericht: Amtsgericht Stuttgart<br />
-            Registernummer: HRB 720843
+            Registergericht: Amtsgericht Charlottenburg<br />
+            Registernummer: HRB 279085 B
           </p>
 
           <h3 className="text-lg font-bold mt-8 mb-3">Umsatzsteuer-ID</h3>
@@ -41,27 +41,27 @@ const Impressum = () => {
 
           <h3 className="text-lg font-bold mt-8 mb-3">Unternehmensgegenstand</h3>
           <p className="text-sm text-muted-foreground leading-relaxed">
-            Technische Unternehmensberatung, technische und wirtschaftliche Projektberatung und Controlling,
-            Projektmanagement, Personalberatung und damit zusammenhängende Dienstleistungen sowie sonstige
-            Akquisitionsdienstleistungen; ferner die Planung und der Vertrieb von elektrotechnischen und
-            fernmeldetechnischen Anlagen aller Art.
+            Erbringung von Softwareentwicklungs- und damit zusammenhängenden technischen Dienstleistungen als
+            Contract-Developer (Auftragsentwicklung) für verbundene Unternehmen, insbesondere Analyse, Design,
+            Implementierung, Test, Wartung und Betriebs-Support von Softwarelösungen; ausgenommen sind eigene
+            Vermarktung oder Verwertung der hieraus entstehenden Ergebnisse sowie genehmigungspflichtige Tätigkeiten.
           </p>
 
           <h3 className="text-lg font-bold mt-8 mb-3">Kontakt</h3>
           <p>
             E-Mail:{' '}
-            <a href="mailto:kontakt@for-tel.com" className="text-primary hover:underline">
-              kontakt@for-tel.com
+            <a href="mailto:kontakt@vendis-development.de" className="text-primary hover:underline">
+              kontakt@vendis-development.de
             </a>
             <br />
             Telefon:{' '}
-            <a href="tel:+4921186943272" className="text-primary hover:underline">
-              +49 211-86943272
+            <a href="tel:+4930123456789" className="text-primary hover:underline">
+              030 123456789
             </a>
             <br />
             Website:{' '}
-            <a href="https://for-tel.solutions" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">
-              for-tel.solutions
+            <a href="https://vendis.solutions" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">
+              vendis.solutions
             </a>
           </p>
 

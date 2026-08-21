@@ -22,8 +22,8 @@ const Karriere = () => {
       <PageHero
         eyebrow="Karriere"
         title="Karriere bei"
-        highlight="for.tel Solutions"
-        subtitle="Werde Teil unseres Teams in Beratung, Projektmanagement oder Anlagenplanung. Wir suchen Talente, die technische Projekte voranbringen wollen."
+        highlight="Vendis Development Services"
+        subtitle="Werde Teil unseres Teams in Softwareentwicklung, Qualitätssicherung oder Betrieb. Wir suchen Menschen, die Softwarelösungen zuverlässig umsetzen und weiterentwickeln."
         breadcrumb={[
           { label: 'Home', href: '/' },
           { label: 'Karriere' },

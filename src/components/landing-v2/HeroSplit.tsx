@@ -12,20 +12,20 @@ const HeroSplit = () => {
           <div className="hero-animate hero-animate-1 inline-flex items-center gap-2 py-1.5 px-3 rounded-md bg-muted border border-border mb-8">
             <span className="flex h-2 w-2 rounded-full bg-primary" />
             <span className="text-[11px] sm:text-xs font-semibold tracking-wider uppercase text-muted-foreground">
-              Software &amp; Web aus Filderstadt · seit 2006
+              Contract-Development für verbundene Unternehmen
             </span>
           </div>
 
           <h1 className="hero-animate hero-animate-2 font-display text-foreground text-4xl sm:text-5xl lg:text-6xl font-bold leading-[1.08] tracking-tight mb-6">
-            Maßgeschneiderte Software.{' '}
-            <span className="text-primary">Exzellente Webentwicklung.</span>
+            Softwareentwicklung im{' '}
+            <span className="text-primary">Unternehmensverbund.</span>
           </h1>
 
           <p className="hero-animate hero-animate-3 text-lg text-muted-foreground max-w-xl mb-10 leading-relaxed">
-            Wir begleiten mittelständische Unternehmen bei der digitalen
-            Transformation. Von performanten Web-Applikationen bis hin zu
-            komplexen Software-Architekturen — verlässlich, individuell und
-            technologisch auf höchstem Niveau.
+            Wir erbringen Softwareentwicklungs- und damit zusammenhängende
+            technische Dienstleistungen als Contract-Developer für verbundene
+            Unternehmen: Analyse, Design, Implementierung, Test, Wartung und
+            Betriebs-Support von Softwarelösungen.
           </p>
 
           <div className="hero-animate hero-animate-3 flex flex-wrap gap-4">
@@ -33,33 +33,33 @@ const HeroSplit = () => {
               to="/kontakt"
               className="group inline-flex items-center gap-2 px-7 py-4 bg-primary text-primary-foreground font-semibold rounded-md shadow-sm hover:bg-primary/90 transition-all"
             >
-              Projekt starten
+              Kontakt aufnehmen
               <ArrowRight size={17} className="transition-transform group-hover:translate-x-1" />
             </Link>
             <Link
-              to="/leistungen"
+              to="/entwicklung"
               className="inline-flex items-center px-7 py-4 bg-background text-foreground border border-border font-semibold rounded-md shadow-sm hover:bg-muted transition-all"
             >
-              Referenzen ansehen
+              Leistungen ansehen
             </Link>
           </div>
 
           <div className="hero-animate hero-animate-4 mt-12 flex flex-wrap items-center gap-x-6 gap-y-3">
             <span className="inline-flex items-center gap-1.5 text-sm font-semibold text-foreground/70">
               <CheckCircle2 size={15} className="text-primary" />
-              Maßgeschneidert
+              Auftragsentwicklung
             </span>
             <span className="inline-flex items-center gap-1.5 text-sm font-semibold text-foreground/70">
               <CheckCircle2 size={15} className="text-primary" />
-              Skalierbar
+              Wartung & Support
             </span>
             <span className="inline-flex items-center gap-1.5 text-sm font-semibold text-foreground/70">
               <CheckCircle2 size={15} className="text-primary" />
-              Langlebig
+              Test & QA
             </span>
             <span className="inline-flex items-center gap-1.5 text-sm font-semibold text-foreground/70">
               <CheckCircle2 size={15} className="text-primary" />
-              Made in Germany
+              Standort Berlin
             </span>
           </div>
         </div>
@@ -74,7 +74,7 @@ const HeroSplit = () => {
                 <div className="w-2.5 h-2.5 rounded-full bg-border" />
               </div>
               <div className="ml-3 px-3 py-1 bg-background border border-border rounded-md text-[10px] text-muted-foreground/70 w-full max-w-xs truncate font-mono">
-                app.for-tel.solutions/dashboard
+                app.vendis.solutions/dashboard
               </div>
             </div>
 

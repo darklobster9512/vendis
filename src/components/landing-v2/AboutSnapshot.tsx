@@ -4,10 +4,10 @@ import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import aboutImage from '@/assets/landing/about-building.jpg';
 
 const points = [
-  'Unabhängiges Beratungshaus in Filderstadt — herstellerneutral',
-  '20+ Jahre Erfahrung, 150+ Technik-Projekte begleitet',
-  'Direkter Draht zu Beratern, Projektleitung & Geschäftsführung',
-  'Klare Honorarmodelle, transparent kalkuliert',
+  'Contract-Developer ausschließlich für verbundene Unternehmen',
+  'Vollständiger Lebenszyklus: Analyse, Design, Implementierung, Test',
+  'Wartung und Betriebs-Support für bestehende Softwarelösungen',
+  'Keine eigene Vermarktung oder Verwertung der Arbeitsergebnisse',
 ];
 
 const AboutSnapshot = () => {
@@ -18,12 +18,12 @@ const AboutSnapshot = () => {
         <div className={`scroll-hidden ${isVisible ? 'scroll-visible' : ''}`}>
           <p className="text-xs uppercase tracking-[0.25em] text-primary mb-4 font-semibold">Über uns</p>
           <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold leading-[1.1]">
-            Seit 2006 am Markt. Standort Deutschland.
+            Entwicklungsteam im Unternehmensverbund.
           </h2>
           <p className="mt-5 text-base sm:text-lg text-muted-foreground leading-relaxed max-w-xl">
-            for.tel Solutions ist ein unabhängiges Beratungshaus aus der Region Stuttgart.
-            Wir beraten technisch und wirtschaftlich, übernehmen Projektsteuerung, vermitteln Fachpersonal
-            und planen elektro- und fernmeldetechnische Anlagen — bodenständig und herstellerneutral.
+            Die Vendis Development Services GmbH erbringt Softwareentwicklungs- und damit
+            zusammenhängende technische Dienstleistungen als Auftragsentwickler für verbundene
+            Unternehmen. Genehmigungspflichtige Tätigkeiten sind ausgenommen.
           </p>
 
           <ul className="mt-8 space-y-3">
@@ -39,8 +39,8 @@ const AboutSnapshot = () => {
             <Link to="/team" className="group inline-flex items-center justify-center gap-2 px-6 h-12 rounded-md bg-foreground text-background font-semibold hover:bg-foreground/90 transition-all">
               Team kennenlernen <ArrowUpRight size={16} className="transition-transform group-hover:translate-x-1 group-hover:-translate-y-1"/>
             </Link>
-            <Link to="/methodik" className="group inline-flex items-center justify-center gap-2 px-6 h-12 rounded-md border border-border font-semibold hover:border-primary/40 transition-all">
-              Unsere Methodik <ArrowUpRight size={16} className="text-muted-foreground transition-transform group-hover:translate-x-1 group-hover:-translate-y-1"/>
+            <Link to="/prozess" className="group inline-flex items-center justify-center gap-2 px-6 h-12 rounded-md border border-border font-semibold hover:border-primary/40 transition-all">
+              Unser Prozess <ArrowUpRight size={16} className="text-muted-foreground transition-transform group-hover:translate-x-1 group-hover:-translate-y-1"/>
             </Link>
           </div>
         </div>
@@ -50,7 +50,7 @@ const AboutSnapshot = () => {
           <div className="relative rounded-lg overflow-hidden border border-border shadow-sm aspect-[4/5] bg-muted">
             <img
               src={aboutImage}
-              alt="for.tel Solutions Büro in Filderstadt"
+              alt="Büro der Vendis Development Services GmbH in Berlin"
               width={1080}
               height={1350}
               loading="lazy"
@@ -61,8 +61,8 @@ const AboutSnapshot = () => {
             <div className="absolute inset-0 bg-gradient-to-t from-background/30 via-transparent to-transparent pointer-events-none" />
             <div className="absolute bottom-6 left-6 right-6 sm:left-7 sm:right-auto inline-flex flex-col gap-1 px-5 py-4 rounded-md bg-background/95 backdrop-blur-xl border border-border shadow-lg">
               <span className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground">Standort</span>
-              <span className="font-display font-bold text-base">Filderstadt · DE</span>
-              <span className="text-xs text-muted-foreground">10 Min. vom Stuttgarter Flughafen</span>
+              <span className="font-display font-bold text-base">Berlin · DE</span>
+              <span className="text-xs text-muted-foreground">Neue Schönhauser Str. 2, 10178 Berlin</span>
             </div>
           </div>
         </div>
