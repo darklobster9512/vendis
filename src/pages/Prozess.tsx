@@ -4,99 +4,106 @@ import PageHero from '@/components/landing/PageHero';
 import CTASection from '@/components/landing/CTASection';
 import Footer from '@/components/landing/Footer';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
-import { Search, PenTool, FileSignature, HardHat, CheckCircle2, Users, Shield, Scale, RefreshCw } from 'lucide-react';
+import { Search, PenTool, Code2, LifeBuoy, CheckCircle2, Users, Shield, Scale, RefreshCw } from 'lucide-react';
 
 const steps = [
   {
     icon: Search,
     number: '01',
     title: 'Analyse',
-    subtitle: 'Verstehen & Bewerten',
-    description: 'Bestandsaufnahme, Stakeholder-Interviews und technische Bewertung. Wir verstehen Auftrag, Rahmenbedingungen und Risiken vor jeder Planung.',
+    subtitle: 'Anforderungen & Rahmen',
+    description:
+      'Wir nehmen die Anforderungen der beauftragenden Gesellschaft auf, sichten bestehende Systeme und legen Ziele sowie Abnahmekriterien fest.',
     details: [
-      'Stakeholder-Interviews & Workshops',
-      'Bestandsaufnahme & technische Bewertung',
-      'Anforderungs- und Rahmenanalyse',
-      'Risiko- und Schnittstellenanalyse',
-      'Priorisierte Handlungsempfehlungen',
+      'Workshops mit Fachbereich und IT',
+      'Analyse bestehender Systeme & Schnittstellen',
+      'Anforderungs- und Risikoanalyse',
+      'Technische Spezifikation & User Stories',
+      'Aufwandsschätzung und Abnahmekriterien',
     ],
     duration: '1–4 Wochen',
   },
   {
     icon: PenTool,
     number: '02',
-    title: 'Konzept & Planung',
-    subtitle: 'Lösung & Kostenrahmen',
-    description: 'Technisches Konzept, Variantenvergleich und Lastenheft. Mit belastbarem Kostenrahmen und klarem Terminplan.',
+    title: 'Design',
+    subtitle: 'Architektur & Datenmodell',
+    description:
+      'Auf Basis der Spezifikation entsteht die technische Lösung: Architektur, Datenmodell, Schnittstellen und Sicherheitskonzept.',
     details: [
-      'Technisches Konzept & Lastenheft',
-      'Variantenvergleich & Wirtschaftlichkeit',
-      'Vor- und Entwurfsplanung',
-      'Kostenschätzung & -berechnung',
-      'Termin- und Meilensteinplanung',
+      'Softwarearchitektur & Komponentenschnitt',
+      'Datenmodell und Migrationsstrategie',
+      'API- und Schnittstellendefinition',
+      'Berechtigungs- und Sicherheitskonzept',
+      'Release- und Meilensteinplanung',
     ],
-    duration: '2–8 Wochen',
+    duration: '1–4 Wochen',
   },
   {
-    icon: FileSignature,
+    icon: Code2,
     number: '03',
-    title: 'Ausschreibung & Vergabe',
-    subtitle: 'LV, Submission, Vergabe',
-    description: 'Leistungsverzeichnis, Vergabeverfahren und Vergabeempfehlung — auch öffentlich nach VOB/VOL. Wir begleiten Verhandlungen und Beauftragung.',
+    title: 'Implementierung & Test',
+    subtitle: 'Umsetzung in Iterationen',
+    description:
+      'Entwicklung in kurzen Zyklen mit Code-Reviews, automatisierten Tests und lauffähigen Zwischenständen zur laufenden Abstimmung.',
     details: [
-      'Leistungsverzeichnis & Ausschreibungsunterlagen',
-      'Vergabeverfahren (privat & öffentlich)',
-      'Angebotsprüfung & Preisspiegel',
-      'Vergabeempfehlung & Vergabegespräche',
-      'Vertragsgestaltung & Beauftragung',
-    ],
-    duration: '4–12 Wochen',
-  },
-  {
-    icon: HardHat,
-    number: '04',
-    title: 'Realisierung & Betrieb',
-    subtitle: 'Bauüberwachung & Abnahme',
-    description: 'Bauüberwachung, Termin- und Kostenkontrolle, Abnahme und Übergabe. Auf Wunsch begleiten wir den Betrieb weiter.',
-    details: [
-      'Bauüberwachung & Qualitätssicherung',
-      'Termin- und Kostencontrolling',
-      'Claim- und Nachtragsmanagement',
-      'Abnahme & Mängelmanagement',
-      'Übergabe, Dokumentation & Schulung',
+      'Iterative Umsetzung mit Sprint-Reviews',
+      'Code-Reviews & statische Analyse',
+      'Unit-, Integrations- und E2E-Tests',
+      'CI/CD-Pipelines und Testumgebungen',
+      'Abnahmeunterstützung & Fehlerdokumentation',
     ],
     duration: 'projektspezifisch',
+  },
+  {
+    icon: LifeBuoy,
+    number: '04',
+    title: 'Wartung & Betriebs-Support',
+    subtitle: 'Nach dem Go-live',
+    description:
+      'Wir halten die Lösung betriebsfähig: Fehlerbehebung, Updates, Weiterentwicklung und technischer Support im laufenden Betrieb.',
+    details: [
+      'Fehleranalyse und Bugfixing',
+      'Sicherheits- und Abhängigkeits-Updates',
+      'Refactoring & Weiterentwicklung',
+      'Deployment- und Release-Begleitung',
+      'Monitoring-Begleitung & Incident-Bearbeitung',
+    ],
+    duration: 'laufend',
   },
 ];
 
 const principles = [
   {
     icon: Users,
-    title: 'Partnerschaftlich',
-    description: 'Wir arbeiten Seite an Seite mit Ihrem Team — keine Black Box, volle Transparenz.',
+    title: 'Im Verbund',
+    description:
+      'Wir arbeiten ausschließlich im Auftrag verbundener Unternehmen — eng abgestimmt mit deren Fachbereichen und IT.',
   },
   {
     icon: Scale,
-    title: 'Herstellerneutral',
-    description: 'Keine Provisionen, keine Lock-Ins. Empfehlungen rein nach Auftrag und Anforderung.',
+    title: 'Ergebnisse beim Auftraggeber',
+    description:
+      'Alle Arbeitsergebnisse stehen dem beauftragenden Unternehmen zu. Eine eigene Vermarktung findet nicht statt.',
   },
   {
     icon: Shield,
-    title: 'Normenkonform',
-    description: 'Planung nach DIN VDE, HOAI, VOB/VOL und einschlägigen Branchenrichtlinien.',
+    title: 'Nachvollziehbar',
+    description:
+      'Versionskontrolle, dokumentierte Releases und technische Dokumentation gehören zu jedem Auftrag.',
   },
   {
     icon: RefreshCw,
-    title: 'Nachhaltig',
-    description: 'Langfristig betreibbare Anlagen statt Quick-Fixes. Ihr Investment trägt dauerhaft.',
+    title: 'Langlebig',
+    description: 'Wartbarer Code, Tests und Refactoring statt kurzfristiger Zwischenlösungen.',
   },
 ];
 
-const Methodik = () => {
+const Prozess = () => {
   const { ref, isVisible } = useScrollAnimation();
 
   useEffect(() => {
-    document.title = 'Methodik | for.tel Solutions';
+    document.title = 'Prozess | Vendis Development Services GmbH';
     const observer = new IntersectionObserver(
       (entries) => entries.forEach((e) => e.isIntersecting && e.target.classList.add('scroll-visible')),
       { threshold: 0.1 }
@@ -108,13 +115,13 @@ const Methodik = () => {
   return (
     <>
       <PageHero
-        eyebrow="Methodik"
-        title="Unsere"
-        highlight="Methodik"
-        subtitle="Ein bewährter Vier-Phasen-Prozess für technische Projekte — strukturiert, transparent, planbar."
+        eyebrow="Prozess"
+        title="Unser"
+        highlight="Entwicklungsprozess"
+        subtitle="Von Analyse und Design über Implementierung und Test bis zu Wartung und Betriebs-Support — strukturiert und nachvollziehbar je Auftrag."
         breadcrumb={[
           { label: 'Home', href: '/' },
-          { label: 'Methodik' },
+          { label: 'Prozess' },
         ]}
       />
 
@@ -128,10 +135,10 @@ const Methodik = () => {
                 key={step.number}
                 className={`scroll-hidden delay-${Math.min(i + 1, 3)} ${isVisible ? 'scroll-visible' : ''}`}
               >
-                <div className={`grid lg:grid-cols-2 gap-12 items-center`}>
+                <div className="grid lg:grid-cols-2 gap-12 items-center">
                   <div className={isEven ? 'lg:order-2' : ''}>
                     <div className="flex items-center gap-4 mb-6">
-                      <div className="w-14 h-14 rounded-2xl bg-gradient-blue flex items-center justify-center">
+                      <div className="w-14 h-14 rounded-md bg-gradient-blue flex items-center justify-center">
                         <Icon size={26} className="text-primary-foreground" />
                       </div>
                       <div>
@@ -146,7 +153,7 @@ const Methodik = () => {
                     </div>
                   </div>
                   <div className={isEven ? 'lg:order-1' : ''}>
-                    <div className="rounded-2xl border border-border/60 bg-white p-8">
+                    <div className="rounded-md border border-border/60 bg-white p-8">
                       <h3 className="text-sm font-bold text-foreground mb-6">Ergebnisse & Aktivitäten</h3>
                       <div className="space-y-4">
                         {step.details.map((detail) => (
@@ -177,8 +184,11 @@ const Methodik = () => {
             {principles.map((p) => {
               const Icon = p.icon;
               return (
-                <div key={p.title} className="scroll-hidden rounded-2xl border border-border/60 bg-white p-6 text-center hover:border-primary/20 hover:shadow-lg hover:shadow-primary/[0.05] transition-all duration-500">
-                  <div className="w-12 h-12 rounded-xl bg-gradient-blue flex items-center justify-center mx-auto mb-4">
+                <div
+                  key={p.title}
+                  className="scroll-hidden rounded-md border border-border/60 bg-white p-6 text-center hover:border-primary/20 transition-all duration-500"
+                >
+                  <div className="w-12 h-12 rounded-md bg-gradient-blue flex items-center justify-center mx-auto mb-4">
                     <Icon size={22} className="text-primary-foreground" />
                   </div>
                   <h3 className="text-base font-bold mb-2">{p.title}</h3>
@@ -196,4 +206,4 @@ const Methodik = () => {
   );
 };
 
-export default Methodik;
+export default Prozess;
