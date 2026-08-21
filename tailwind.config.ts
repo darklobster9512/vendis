@@ -14,9 +14,11 @@ export default {
     },
     extend: {
       fontFamily: {
-        sans: ['Epilogue', 'system-ui', '-apple-system', 'sans-serif'],
-        display: ['Urbanist', 'Epilogue', 'sans-serif'],
+        sans: ['Manrope', 'system-ui', '-apple-system', 'sans-serif'],
+        display: ['Sora', 'Manrope', 'sans-serif'],
+        mono: ['JetBrains Mono', 'ui-monospace', 'monospace'],
       },
+
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
