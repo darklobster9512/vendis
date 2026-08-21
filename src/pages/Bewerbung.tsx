@@ -6,8 +6,6 @@ import PageHero from '@/components/landing/PageHero';
 import Footer from '@/components/landing/Footer';
 import Reveal from '@/components/site/Reveal';
 import SectionHead from '@/components/site/SectionHead';
-import Photo from '@/components/site/Photo';
-import { photos } from '@/assets/photos';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import {
@@ -111,13 +109,6 @@ const Bewerbung = () => {
                   title="In zwei Minuten bewerben."
                   text="Felder mit * sind Pflichtfelder. Unterlagen kannst du uns im Anschluss per E-Mail nachreichen."
                 />
-                <Reveal delay={3} className="mt-10 hidden lg:block">
-                  <Photo
-                    src={photos.collaborationHands}
-                    alt="Zusammenarbeit im Team"
-                    ratio="aspect-[4/3]"
-                  />
-                </Reveal>
               </div>
             </div>
 
