@@ -1,17 +1,25 @@
-# PM2-Fehler „vite: not found“ beheben
+# Fix: Vite allowedHosts um vendis.solutions erweitern
 
-Im Projekt ist `vite` als `devDependency` eingetragen und das Startskript ruft direkt `vite` auf. Auf dem VPS fehlt daher die lokale Installation unter `node_modules` – häufig, weil nur Production-Abhängigkeiten installiert wurden.
+## Problem
+Beim Aufruf der Seite über `vendis.solutions` blockt Vite die Anfrage:
+`Blocked request. This host ("vendis.solutions") is not allowed.`
 
-## Reparatur
+In `vite.config.ts` (Zeile 14) steht aktuell:
+```ts
+allowedHosts: ["for-tel.solutions", "www.for-tel.solutions"],
+```
+Die neue Domain `vendis.solutions` fehlt.
 
-Im Projektverzeichnis auf dem VPS diesen Befehl ausführen:
-
-```bash
-npm install --legacy-peer-deps --include=dev && pm2 restart vendis --update-env
+## Änderung
+In `vite.config.ts` die `allowedHosts`-Zeile ersetzen durch:
+```ts
+allowedHosts: ["for-tel.solutions", "www.for-tel.solutions", "vendis.solutions", "www.vendis.solutions"],
 ```
 
-Damit werden auch die für den aktuellen PM2-Start benötigten Entwicklungsabhängigkeiten installiert und anschließend der Prozess `vendis` neu gestartet.
+## Nach dem Deploy
+Auf dem VPS einmal neu starten, damit Vite die Config neu lädt:
+```bash
+pm2 restart vendis --update-env
+```
 
-## Kontrolle
-
-Danach mit `pm2 logs vendis --lines 50` prüfen, dass Vite startet und der Prozess nicht erneut in den Fehlerstatus wechselt. Es sind keine Änderungen am Projektcode erforderlich.
+Keine weiteren Code-Änderungen erforderlich.
