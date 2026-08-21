@@ -50,7 +50,7 @@ const Navbar = () => {
             <img
               src={vendisLogo.url}
               alt="Vendis Development Services"
-              className={`w-auto transition-all duration-300 ${scrolled ? 'h-6' : 'h-7 sm:h-8'}`}
+              className={`w-auto transition-all duration-300 ${scrolled ? 'h-8' : 'h-9 sm:h-10'}`}
               draggable={false}
             />
           </Link>
