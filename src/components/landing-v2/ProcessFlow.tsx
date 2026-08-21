@@ -2,10 +2,10 @@ import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import processBg from '@/assets/landing/process-bg.jpg';
 
 const steps = [
-  { n: '01', title: 'Analyse', desc: 'Bestandsaufnahme, Stakeholder-Interviews und Zieldefinition. Wir verstehen Auftrag, Rahmenbedingungen und Risiken bevor wir planen.', dur: '1 – 3 Wochen' },
-  { n: '02', title: 'Konzept', desc: 'Technisches Konzept, Lastenheft, Kostenschätzung. Optional Machbarkeitsstudie und Vergleichsvarianten.', dur: '2 – 6 Wochen' },
-  { n: '03', title: 'Ausschreibung & Realisierung', desc: 'Leistungsverzeichnis, Vergabe, Bauüberwachung. Wir steuern Termine, Kosten und Qualität bis zur Abnahme.', dur: '3 – 18 Monate' },
-  { n: '04', title: 'Betrieb & Übergabe', desc: 'Inbetriebnahme, Dokumentation, Schulung. Auf Wunsch weiterführendes Projektcontrolling oder Service-Begleitung.', dur: 'fortlaufend' },
+  { n: '01', title: 'Analyse', desc: 'Aufnahme der fachlichen Anforderungen des auftraggebenden Unternehmens, Klärung von Schnittstellen, Rahmenbedingungen und Risiken.', dur: 'je Auftrag' },
+  { n: '02', title: 'Design', desc: 'Softwarearchitektur, Datenmodell, Schnittstellen- und Sicherheitskonzept. Aufwands- und Umsetzungsplanung.', dur: 'je Auftrag' },
+  { n: '03', title: 'Implementierung & Test', desc: 'Iterative Entwicklung mit Code-Reviews, automatisierten Tests, Abnahmetests und dokumentierten Releases.', dur: 'iterativ' },
+  { n: '04', title: 'Wartung & Betriebs-Support', desc: 'Fehlerbehebung, Weiterentwicklung, Updates und technischer Support im laufenden Betrieb.', dur: 'fortlaufend' },
 ];
 
 const ProcessFlow = () => {
@@ -37,11 +37,12 @@ const ProcessFlow = () => {
         <div className={`max-w-3xl mb-14 scroll-hidden ${isVisible ? 'scroll-visible' : ''}`}>
           <p className="text-xs uppercase tracking-[0.25em] text-primary-glow mb-4 font-semibold">Vorgehen</p>
           <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold leading-[1.1]">
-            Vier Phasen — strukturiert, transparent, planbar.
+            Vier Phasen — von der Anforderung bis zum Betrieb.
           </h2>
           <p className="mt-5 text-base text-background/70 leading-relaxed max-w-2xl">
-            Jede Phase mit klarem Ergebnis, definiertem Aufwand und Festpreis.
-            Keine Überraschungen, keine versteckten Kosten.
+            Jede Phase liefert ein definiertes Ergebnis. Alle Arbeitsergebnisse gehen an
+            das beauftragende verbundene Unternehmen über — eine eigene Vermarktung
+            oder Verwertung findet nicht statt.
           </p>
         </div>
 

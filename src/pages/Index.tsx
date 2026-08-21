@@ -11,7 +11,7 @@ import Footer from '@/components/landing/Footer';
 
 const Index = () => {
   useEffect(() => {
-    document.title = 'for.tel Solutions – Technische Beratung, Projektmanagement & Anlagenplanung';
+    document.title = 'Vendis Development Services GmbH – Auftragsentwicklung für verbundene Unternehmen';
   }, []);
 
   return (

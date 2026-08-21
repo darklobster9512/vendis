@@ -4,13 +4,14 @@ import logo from '@/assets/logo.png';
 import { Menu, X, ArrowRight, Phone, Mail, MapPin } from 'lucide-react';
 
 const navLinks = [
-  { label: 'Leistungen', href: '/leistungen' },
-  { label: 'Anlagenplanung', href: '/software' },
-  { label: 'Methodik', href: '/methodik' },
+  { label: 'Entwicklung', href: '/entwicklung' },
+  { label: 'Technologien', href: '/technologien' },
+  { label: 'Prozess', href: '/prozess' },
   { label: 'Team', href: '/team' },
   { label: 'Karriere', href: '/karriere' },
   { label: 'Kontakt', href: '/kontakt' },
 ];
+
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -36,15 +37,15 @@ const Navbar = () => {
       <div className="relative z-[60] hidden md:block bg-muted/60 border-b border-border text-muted-foreground">
         <div className="max-w-7xl mx-auto px-6 h-10 flex items-center justify-between text-xs">
           <div className="flex items-center gap-6">
-            <a href="tel:+4921186943272" className="hover:text-primary transition-colors flex items-center gap-1.5">
-              <Phone size={12}/> +49 211-86943272
+            <a href="tel:+4930123456789" className="hover:text-primary transition-colors flex items-center gap-1.5">
+              <Phone size={12}/> 030 123456789
             </a>
-            <a href="mailto:kontakt@for-tel.com" className="hover:text-primary transition-colors flex items-center gap-1.5">
-              <Mail size={12}/> kontakt@for-tel.com
+            <a href="mailto:kontakt@vendis-development.de" className="hover:text-primary transition-colors flex items-center gap-1.5">
+              <Mail size={12}/> kontakt@vendis-development.de
             </a>
           </div>
           <div className="flex items-center gap-5">
-            <span className="flex items-center gap-1.5"><MapPin size={12}/> Filderstadt · DE</span>
+            <span className="flex items-center gap-1.5"><MapPin size={12}/> Berlin · DE</span>
             <span className="hidden lg:inline">Mo – Fr · 08:00 – 18:00</span>
           </div>
         </div>
@@ -64,7 +65,7 @@ const Navbar = () => {
           <Link to="/" className="shrink-0 flex items-center">
             <img
               src={logo}
-              alt="for.tel Solutions"
+              alt="Vendis Development Services"
               loading="eager"
               fetchPriority="high"
               className={`w-auto object-contain transition-all duration-300 ${scrolled ? 'h-6' : 'h-7'}`}
@@ -98,7 +99,7 @@ const Navbar = () => {
               to="/kontakt"
               className="hidden md:inline-flex items-center gap-2 px-6 h-11 rounded-full bg-primary text-primary-foreground text-sm font-semibold hover:bg-primary/90 transition-all whitespace-nowrap group"
             >
-              Projekt anfragen
+              Kontakt aufnehmen
               <ArrowRight size={15} className="transition-transform group-hover:translate-x-0.5" />
             </Link>
 
@@ -129,7 +130,7 @@ const Navbar = () => {
         >
           <div className="flex items-center justify-between px-6 pt-6 pb-4 border-b border-border">
             <Link to="/" onClick={() => setMobileOpen(false)}>
-              <img src={logo} alt="for.tel Solutions" className="h-5" />
+              <img src={logo} alt="Vendis Development Services" className="h-5" />
             </Link>
             <button
               onClick={() => setMobileOpen(false)}
@@ -158,16 +159,16 @@ const Navbar = () => {
 
           <div className="px-6 py-6 border-t border-border bg-muted/40 space-y-3">
             <div className="space-y-2 text-sm text-muted-foreground">
-              <a href="tel:+4921186943272" className="flex items-center gap-2.5 hover:text-foreground transition-colors"><Phone size={14} className="text-primary"/> +49 211-86943272</a>
-              <a href="mailto:kontakt@for-tel.com" className="flex items-center gap-2.5 hover:text-foreground transition-colors"><Mail size={14} className="text-primary"/> kontakt@for-tel.com</a>
-              <div className="flex items-center gap-2.5"><MapPin size={14} className="text-primary"/> Filderstadt, DE</div>
+              <a href="tel:+4930123456789" className="flex items-center gap-2.5 hover:text-foreground transition-colors"><Phone size={14} className="text-primary"/> 030 123456789</a>
+              <a href="mailto:kontakt@vendis-development.de" className="flex items-center gap-2.5 hover:text-foreground transition-colors"><Mail size={14} className="text-primary"/> kontakt@vendis-development.de</a>
+              <div className="flex items-center gap-2.5"><MapPin size={14} className="text-primary"/> Berlin, DE</div>
             </div>
             <Link
               to="/kontakt"
               onClick={() => setMobileOpen(false)}
               className="flex items-center justify-center gap-2 w-full px-6 py-3.5 rounded-md bg-primary text-primary-foreground font-semibold"
             >
-              Projekt anfragen
+              Kontakt aufnehmen
               <ArrowRight size={16} />
             </Link>
           </div>

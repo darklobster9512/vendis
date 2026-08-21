@@ -11,14 +11,14 @@ import {
 } from 'lucide-react';
 
 const projectTypes = [
-  { icon: Network, label: 'Netzwerkmodernisierung' },
-  { icon: Server, label: 'Rechenzentrumsplanung' },
-  { icon: Cable, label: 'Glasfaser-Outsourcing' },
-  { icon: PhoneCall, label: 'TK-Beschaffung' },
-  { icon: Users, label: 'Personalberatung' },
-  { icon: ShieldCheck, label: 'IT-Sicherheitskonzepte' },
-  { icon: Radio, label: 'Mobilfunk-Rollouts' },
-  { icon: Building2, label: 'Standortvernetzung' },
+  { icon: Network, label: 'Web-Applikationen' },
+  { icon: Server, label: 'Backend- & API-Services' },
+  { icon: Cable, label: 'Schnittstellen & Integration' },
+  { icon: PhoneCall, label: 'Anforderungsanalyse' },
+  { icon: Users, label: 'Test & Qualitätssicherung' },
+  { icon: ShieldCheck, label: 'Wartung & Betriebs-Support' },
+  { icon: Radio, label: 'CI/CD & Automatisierung' },
+  { icon: Building2, label: 'Datenmodellierung' },
 ];
 
 const ProjectTypesMarquee = () => {
@@ -33,10 +33,10 @@ const ProjectTypesMarquee = () => {
         <div className={`text-center max-w-2xl mx-auto mb-12 scroll-hidden ${isVisible ? 'scroll-visible' : ''}`}>
           <p className="text-xs uppercase tracking-[0.25em] text-primary mb-4 font-semibold">Projekttypen</p>
           <h2 className="font-display text-2xl sm:text-3xl font-bold leading-tight">
-            Worin wir Tag für Tag liefern.
+            Woran unsere Teams arbeiten.
           </h2>
           <p className="mt-4 text-sm sm:text-base text-muted-foreground">
-            Ein Auszug konkreter Projektarten, die unsere Teams planen, umsetzen und betreiben.
+            Typische Arbeitspakete aus der Auftragsentwicklung für verbundene Unternehmen.
           </p>
         </div>
 

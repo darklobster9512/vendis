@@ -16,8 +16,8 @@ export interface Stelle {
 export const stellen: Stelle[] = [
   {
     slug: 'onlineprozess-tests',
-    titel: 'Mitarbeiter (m/w/d) für Onlineprozess-Tests',
-    standort: 'Filderstadt',
+    titel: 'Mitarbeiter (m/w/d) für Software- und Prozesstests',
+    standort: 'Berlin',
     modell: 'Remote / Minijob / Teilzeit',
     arbeitszeit: 'Flexibel (ca. 5–30 Std./Woche)',
     stundenlohn: '29 €',
@@ -51,18 +51,18 @@ export const stellen: Stelle[] = [
   {
     slug: 'softwareentwicklung',
     titel: 'Mitarbeiter (m/w/d) für Softwareentwicklung',
-    standort: 'Filderstadt',
+    standort: 'Berlin',
     modell: 'Remote',
     kurzbeschreibung:
-      'Gestalte die technische Architektur unserer Kundenprojekte und entwickle performante Web-Applikationen von der Konzeption bis zum Go-Live.',
+      'Gestalte die technische Architektur unserer Entwicklungsaufträge und entwickle Web-Applikationen von der Analyse bis zum Go-live.',
     beschreibung:
-      'Als Senior Software Engineer gestaltest du die technische Architektur unserer Kundenprojekte und entwickelst performante Web-Applikationen von der Konzeption bis zum Go-Live. Du arbeitest eng mit unserem Consulting-Team zusammen, um maßgeschneiderte Softwarelösungen zu realisieren.',
+      'Als Software Engineer gestaltest du die technische Architektur unserer Entwicklungsaufträge und entwickelst Web-Applikationen von der Analyse bis zum Go-live. Du arbeitest eng mit Requirements Engineering und QA zusammen, um passgenaue Softwarelösungen für die verbundenen Unternehmen zu realisieren.',
     aufgaben: [
       'Architektur und Entwicklung von Full-Stack-Webanwendungen (React, TypeScript, Node.js)',
       'Code Reviews und Mentoring von Junior-Entwicklern',
-      'Technische Beratung in Kundenprojekten',
+      'Technische Abstimmung mit den Fachbereichen der Auftraggeber',
       'Mitgestaltung unserer internen Tools und Frameworks',
-      'Enge Zusammenarbeit mit UX/UI-Design und Prozessberatung',
+      'Enge Zusammenarbeit mit UX/UI-Design und Requirements Engineering',
     ],
     voraussetzungen: [
       'Mindestens 5 Jahre Erfahrung in der Softwareentwicklung',
@@ -82,7 +82,7 @@ export const stellen: Stelle[] = [
   {
     slug: 'ux-ui-design',
     titel: 'Mitarbeiter (m/w/d) für UX/UI Design',
-    standort: 'Filderstadt',
+    standort: 'Berlin',
     modell: 'Remote',
     kurzbeschreibung:
       'Verantworte das visuelle und interaktive Erlebnis unserer Softwareprodukte — von User Research über Prototypen bis zur pixelgenauen Umsetzung.',
@@ -113,7 +113,7 @@ export const stellen: Stelle[] = [
   {
     slug: 'devops-cloud-infrastruktur',
     titel: 'Mitarbeiter (m/w/d) für DevOps & Cloud-Infrastruktur',
-    standort: 'Filderstadt',
+    standort: 'Berlin',
     modell: 'Remote',
     kurzbeschreibung:
       'Sorge für eine robuste, skalierbare und sichere Infrastruktur. Automatisiere Deployments und entwickle unsere Cloud-Architektur weiter.',
@@ -144,18 +144,18 @@ export const stellen: Stelle[] = [
   {
     slug: 'werkstudent-digitalisierung',
     titel: 'Werkstudent (m/w/d) im Bereich Digitalisierung',
-    standort: 'Filderstadt',
+    standort: 'Berlin',
     modell: 'Hybrid',
     kurzbeschreibung:
-      'Unterstütze unser Team bei der Umsetzung von Kundenprojekten und bekomme Einblick in Beratung, Softwareentwicklung und Projektmanagement.',
+      'Unterstütze unser Team bei der Umsetzung von Entwicklungsaufträgen und bekomme Einblick in Analyse, Softwareentwicklung und Projektmanagement.',
     beschreibung:
-      'Als Werkstudent:in im Bereich Digitalisierung unterstützt du unser Team bei der Umsetzung von Kundenprojekten. Du bekommst Einblick in Beratung, Softwareentwicklung und Projektmanagement — ideal für den Berufseinstieg.',
+      'Als Werkstudent:in unterstützt du unser Team bei der Umsetzung von Entwicklungsaufträgen. Du bekommst Einblick in Anforderungsanalyse, Softwareentwicklung und Projektmanagement — ideal für den Berufseinstieg.',
     aufgaben: [
       'Unterstützung bei der Analyse und Dokumentation von Geschäftsprozessen',
       'Mitarbeit an der Entwicklung von Web-Applikationen',
       'Erstellung von Präsentationen und Projektdokumentationen',
       'Recherche zu Technologien und Markttrends',
-      'Teilnahme an Kundenterminen und internen Workshops',
+      'Teilnahme an Abstimmungsterminen und internen Workshops',
     ],
     voraussetzungen: [
       'Laufendes Studium in Informatik, Wirtschaftsinformatik oder vergleichbar',
@@ -166,10 +166,10 @@ export const stellen: Stelle[] = [
     ],
     benefits: [
       'Flexible Arbeitszeiten neben dem Studium',
-      'Praktische Erfahrung in echten Kundenprojekten',
-      'Mentoring durch erfahrene Berater und Entwickler',
+      'Praktische Erfahrung in echten Entwicklungsprojekten',
+      'Mentoring durch erfahrene Entwicklerinnen und Entwickler',
       'Übernahmemöglichkeit nach dem Studium',
-      'Modernes Büro in Filderstadt oder Remote-Arbeit',
+      'Modernes Büro in Berlin oder Remote-Arbeit',
     ],
   },
 ];

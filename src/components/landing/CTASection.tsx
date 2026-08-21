@@ -16,12 +16,12 @@ const CTASection = () => {
       <div className="max-w-3xl mx-auto px-6 text-center relative z-10">
         <div className={`scroll-hidden ${isVisible ? 'scroll-visible' : ''}`}>
           <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight mb-6 text-primary-foreground">
-            Bereit für den nächsten Schritt?
+            Entwicklungsauftrag besprechen?
           </h2>
         </div>
         <p className={`scroll-hidden delay-1 ${isVisible ? 'scroll-visible' : ''} text-lg text-white/80 max-w-xl mx-auto mb-10`}>
-          Lassen Sie uns gemeinsam besprechen, wie wir Ihr Technik-Projekt
-          beratend, steuernd oder planerisch nach vorn bringen.
+          Schildern Sie uns Ihr Vorhaben — wir bewerten Umfang, Aufwand und
+          Umsetzungsweg der Auftragsentwicklung.
         </p>
         <div className={`scroll-hidden delay-2 ${isVisible ? 'scroll-visible' : ''}`}>
           <Link
@@ -33,7 +33,7 @@ const CTASection = () => {
           </Link>
         </div>
         <p className={`scroll-hidden delay-3 ${isVisible ? 'scroll-visible' : ''} mt-6 text-sm text-white/60`}>
-          Keine Verpflichtung. Kein Risiko. Nur Ergebnisse.
+          Leistungen ausschließlich für verbundene Unternehmen.
         </p>
       </div>
     </section>

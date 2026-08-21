@@ -10,28 +10,28 @@ const departments = [
     intro: 'Strategische Ausrichtung und unternehmerische Verantwortung.',
     members: [
       {
-        name: 'Manfred Beutel',
+        name: 'Sebastian Andre Deutsch, Thomas Friedrich Witt',
         role: 'Geschäftsführer',
         description:
-          'Gründer von for.tel Solutions mit langjähriger Erfahrung im Aufbau digitaler Test- und Service-Teams. Verantwortet die strategische Ausrichtung.',
+          'Verantworten die strategische Ausrichtung der Gesellschaft und die Steuerung der Entwicklungsaufträge im Unternehmensverbund.',
       },
     ],
   },
   {
     title: 'Betrieb & Finanzen',
-    intro: 'Operative Steuerung und verlässliche Abwicklung aller Aufträge und Auszahlungen.',
+    intro: 'Operative Steuerung und verlässliche Abwicklung aller Entwicklungsaufträge.',
     members: [
       {
         name: 'Sabine Vogt',
         role: 'Leiterin Operations',
         description:
-          'Sorgt dafür, dass jeder Auftrag reibungslos läuft und unsere Tester pünktlich ihre Vergütung erhalten.',
+          'Sorgt dafür, dass Entwicklungsaufträge planbar laufen — von der Beauftragung bis zur Abnahme.',
       },
       {
         name: 'Andrea Wenzel',
         role: 'Leiterin Finanzen',
         description:
-          'Hält alle Zahlen im Blick und stellt sicher, dass Auszahlungen zuverlässig und transparent erfolgen.',
+          'Hält Aufwände und Abrechnung im Blick und sorgt für transparente Leistungsnachweise gegenüber den Auftraggebern.',
       },
     ],
   },
@@ -43,7 +43,7 @@ const departments = [
         name: 'Jonas Beckmann',
         role: 'Recruiting & Community',
         description:
-          'Erste Anlaufstelle für neue Bewerber. Begleitet dich vom ersten Klick bis zum erfolgreichen Onboarding.',
+          'Erste Anlaufstelle für neue Bewerberinnen und Bewerber — vom ersten Kontakt bis zum Onboarding.',
       },
       {
         name: 'Katrin Hofmann',
@@ -55,55 +55,55 @@ const departments = [
   },
   {
     title: 'Technologie',
-    intro: 'Sichere, stabile und schnelle Prozesse als Fundament unserer Plattform.',
+    intro: 'Architektur, Implementierung und Betrieb der beauftragten Softwarelösungen.',
     members: [
       {
         name: 'Michael Schreiber',
         role: 'Projektleiter',
         description:
-          'Leitet komplexe Kundenprojekte und sorgt dafür, dass Anforderungen, Zeitpläne und Qualität zuverlässig zusammenkommen.',
+          'Leitet Entwicklungsaufträge und sorgt dafür, dass Anforderungen, Zeitpläne und Qualität zusammenkommen.',
       },
       {
         name: 'Stefan Lindner',
         role: 'Softwareentwickler',
         description:
-          'Entwickelt interne Tools und Schnittstellen, mit denen unsere Tester effizient und nachvollziehbar arbeiten können.',
+          'Entwickelt Backend-Services und Schnittstellen und verantwortet Code-Qualität und Releases.',
       },
     ],
   },
   {
     title: 'Qualitätssicherung & Testing',
-    intro: 'Das Herzstück unserer Arbeit — strukturierte Tests und belastbare Ergebnisse.',
+    intro: 'Strukturierte Tests und belastbare Ergebnisse vor jeder Abnahme.',
     members: [
       {
         name: 'Daniel Krüger',
         role: 'Lead Quality Assurance',
         description:
-          'Verantwortet Teststrategien für Kundenprojekte und stellt einheitliche Qualitätsstandards über alle Tester-Teams hinweg sicher.',
+          'Verantwortet Teststrategien je Auftrag und stellt einheitliche Qualitätsstandards über alle Projekte hinweg sicher.',
       },
       {
         name: 'Lena Bachmann',
         role: 'Testkoordinatorin',
         description:
-          'Plant Testzyklen, verteilt Aufgaben an unsere Tester-Community und wertet Ergebnisse strukturiert aus.',
+          'Plant Testzyklen, betreut die Testautomatisierung und wertet Ergebnisse strukturiert aus.',
       },
     ],
   },
   {
-    title: 'Kunden & Beratung',
-    intro: 'Direkter Draht zu unseren Kunden — von der ersten Idee bis zur langfristigen Partnerschaft.',
+    title: 'Anforderungen & Abstimmung',
+    intro: 'Direkter Draht zu den Fachbereichen der verbundenen Unternehmen — von der Anforderung bis zur Abnahme.',
     members: [
       {
         name: 'Tobias Reinhardt',
-        role: 'Senior Consultant',
+        role: 'Requirements Engineer',
         description:
-          'Berät Kunden bei der Optimierung digitaler Prozesse und übersetzt Geschäftsanforderungen in messbare Testkonzepte.',
+          'Übersetzt fachliche Anforderungen der Auftraggeber in technische Spezifikationen und prüfbare Abnahmekriterien.',
       },
       {
         name: 'Carolin Maier',
-        role: 'Key Account Managerin',
+        role: 'Auftragskoordinatorin',
         description:
-          'Erste Ansprechpartnerin für unsere Großkunden — von der ersten Anfrage bis zur langfristigen Partnerschaft.',
+          'Koordiniert Aufträge aus dem Unternehmensverbund und hält Umfang, Termine und Abstimmungen zusammen.',
       },
     ],
   },
@@ -125,7 +125,7 @@ const Team = () => {
         eyebrow="Team"
         title="Unser"
         highlight="Team"
-        subtitle="Die Menschen hinter for.tel Solutions — Berater, Projektleiter und Planer mit Branchenerfahrung."
+        subtitle="Die Menschen hinter Vendis Development Services — Entwicklerinnen, Tester und Projektleiter mit Erfahrung in der Auftragsentwicklung."
         breadcrumb={[
           { label: 'Home', href: '/' },
           { label: 'Team' },

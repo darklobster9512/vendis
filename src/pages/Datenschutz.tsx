@@ -18,17 +18,17 @@ const Datenschutz = () => {
 
           <h2 className="text-2xl font-extrabold tracking-tight mb-6">1. Verantwortlicher</h2>
           <p>
-            for.tel Solutions GmbH<br />
-            Hornbergstr. 35<br />
-            70794 Filderstadt<br />
+            Vendis Development Services GmbH<br />
+            Neue Schönhauser Str. 2<br />
+            10178 Berlin<br />
             E-Mail:{' '}
-            <a href="mailto:kontakt@for-tel.com" className="text-primary hover:underline">
-              kontakt@for-tel.com
+            <a href="mailto:kontakt@vendis-development.de" className="text-primary hover:underline">
+              kontakt@vendis-development.de
             </a>
             <br />
             Telefon:{' '}
-            <a href="tel:+4921186943272" className="text-primary hover:underline">
-              +49 211-86943272
+            <a href="tel:+4930123456789" className="text-primary hover:underline">
+              030 123456789
             </a>
           </p>
 

@@ -1,39 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://for-tel.solutions/</loc>
+    <loc>https://vendis.solutions/</loc>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://for-tel.solutions/leistungen</loc>
+    <loc>https://vendis.solutions/leistungen</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://for-tel.solutions/software</loc>
+    <loc>https://vendis.solutions/software</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://for-tel.solutions/methodik</loc>
+    <loc>https://vendis.solutions/methodik</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://for-tel.solutions/team</loc>
+    <loc>https://vendis.solutions/team</loc>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://for-tel.solutions/kontakt</loc>
+    <loc>https://vendis.solutions/kontakt</loc>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://for-tel.solutions/karriere</loc>
+    <loc>https://vendis.solutions/karriere</loc>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://for-tel.solutions/impressum</loc>
+    <loc>https://vendis.solutions/impressum</loc>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://for-tel.solutions/datenschutz</loc>
+    <loc>https://vendis.solutions/datenschutz</loc>
     <priority>0.3</priority>
   </url>
 </urlset>
