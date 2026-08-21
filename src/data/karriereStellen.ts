@@ -15,7 +15,7 @@ export interface Stelle {
 
 export const stellen: Stelle[] = [
   {
-    slug: 'onlineprozess-tests',
+    slug: 'onlineprozess-tester',
     titel: 'Mitarbeiter (m/w/d) für Software- und Prozesstests',
     standort: 'Berlin',
     modell: 'Remote / Minijob / Teilzeit',

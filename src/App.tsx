@@ -43,6 +43,7 @@ const App = () => (
             <Route path="/datenschutz" element={<Datenschutz />} />
             <Route path="/karriere" element={<Karriere />} />
             <Route path="/karriere/bewerbung" element={<Bewerbung />} />
+            <Route path="/karriere/onlineprozess-tests" element={<Navigate to="/karriere/onlineprozess-tester" replace />} />
             <Route path="/karriere/:slug" element={<KarriereDetail />} />
           </Route>
           <Route path="*" element={<NotFound />} />
