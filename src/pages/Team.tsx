@@ -3,6 +3,10 @@ import { useEffect } from 'react';
 import PageHero from '@/components/landing/PageHero';
 import CTASection from '@/components/landing/CTASection';
 import Footer from '@/components/landing/Footer';
+import Reveal from '@/components/site/Reveal';
+import Photo from '@/components/site/Photo';
+import SectionHead from '@/components/site/SectionHead';
+import { photos } from '@/assets/photos';
 
 const departments = [
   {
@@ -91,7 +95,8 @@ const departments = [
   },
   {
     title: 'Anforderungen & Abstimmung',
-    intro: 'Direkter Draht zu den Fachbereichen der verbundenen Unternehmen — von der Anforderung bis zur Abnahme.',
+    intro:
+      'Direkter Draht zu den Fachbereichen der verbundenen Unternehmen — von der Anforderung bis zur Abnahme.',
     members: [
       {
         name: 'Tobias Reinhardt',
@@ -111,12 +116,7 @@ const departments = [
 
 const Team = () => {
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => entries.forEach((e) => e.isIntersecting && e.target.classList.add('scroll-visible')),
-      { threshold: 0.1 }
-    );
-    document.querySelectorAll('.scroll-hidden').forEach((el) => observer.observe(el));
-    return () => observer.disconnect();
+    document.title = 'Team | Vendis Development Services GmbH';
   }, []);
 
   return (
@@ -126,47 +126,80 @@ const Team = () => {
         title="Unser"
         highlight="Team"
         subtitle="Die Menschen hinter Vendis Development Services — Entwicklerinnen, Tester und Projektleiter mit Erfahrung in der Auftragsentwicklung."
-        breadcrumb={[
-          { label: 'Home', href: '/' },
-          { label: 'Team' },
-        ]}
+        breadcrumb={[{ label: 'Home', href: '/' }, { label: 'Team' }]}
+        image={photos.teamMeeting}
+        imageAlt="Teambesprechung im Berliner Büro"
       />
 
-      <section className="max-w-5xl mx-auto px-6 py-20 md:py-28">
-        <div className="space-y-16">
-          {departments.map((dept, idx) => (
-            <div
-              key={dept.title}
-              className={`scroll-hidden ${idx > 0 ? 'pt-16 border-t border-border' : ''}`}
-            >
-              <div className="grid md:grid-cols-[220px_1fr] gap-8 md:gap-12">
-                <div>
-                  <h2 className="text-2xl font-semibold text-foreground leading-tight">
-                    {dept.title}
-                  </h2>
-                  <p className="text-sm text-muted-foreground mt-3 leading-relaxed">
-                    {dept.intro}
-                  </p>
-                </div>
+      {/* Photo band */}
+      <section className="bg-background">
+        <div className="max-w-7xl mx-auto px-5 sm:px-8 pt-16 sm:pt-20">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <Reveal>
+              <Photo src={photos.officeOpenSpace} alt="Offener Arbeitsbereich" ratio="aspect-[3/4]" />
+            </Reveal>
+            <Reveal delay={2}>
+              <Photo
+                src={photos.collaborationHands}
+                alt="Gemeinsame Abstimmung am Tisch"
+                ratio="aspect-[3/4]"
+              />
+            </Reveal>
+            <Reveal delay={3}>
+              <Photo
+                src={photos.pairProgramming}
+                alt="Pair Programming im Entwicklungsteam"
+                ratio="aspect-[3/4]"
+              />
+            </Reveal>
+          </div>
+        </div>
+      </section>
 
-                <div className="grid sm:grid-cols-2 gap-x-10 gap-y-8">
-                  {dept.members.map((member) => (
-                    <div key={member.name}>
-                      <h3 className="text-lg font-semibold text-foreground leading-tight">
-                        {member.name}
-                      </h3>
-                      <p className="text-[11px] font-semibold uppercase tracking-wider text-primary mt-1">
-                        {member.role}
-                      </p>
-                      <p className="text-sm text-muted-foreground mt-3 leading-relaxed">
-                        {member.description}
-                      </p>
-                    </div>
-                  ))}
+      <section className="bg-background">
+        <div className="max-w-7xl mx-auto px-5 sm:px-8 py-20 sm:py-28">
+          <SectionHead
+            index="§ 01"
+            label="Organisation"
+            title="Sechs Bereiche, ein Auftrag."
+            text="Von Anforderungsaufnahme über Entwicklung und Test bis zu Betrieb und People."
+          />
+
+          <div className="mt-16 space-y-14">
+            {departments.map((dept, idx) => (
+              <Reveal key={dept.title}>
+                <div className="grid md:grid-cols-[minmax(0,260px)_1fr] gap-8 md:gap-14 border-t border-border pt-8">
+                  <div>
+                    <span className="font-mono text-[11px] tracking-[0.22em] text-primary">
+                      {String(idx + 1).padStart(2, '0')}
+                    </span>
+                    <h2 className="mt-3 font-display text-2xl font-semibold leading-tight">
+                      {dept.title}
+                    </h2>
+                    <p className="mt-3 text-sm text-muted-foreground leading-relaxed">
+                      {dept.intro}
+                    </p>
+                  </div>
+
+                  <div className="grid sm:grid-cols-2 gap-x-12 gap-y-8">
+                    {dept.members.map((member) => (
+                      <div key={member.name}>
+                        <h3 className="font-display text-lg font-semibold leading-tight">
+                          {member.name}
+                        </h3>
+                        <p className="mt-1.5 font-mono text-[10px] uppercase tracking-[0.2em] text-primary">
+                          {member.role}
+                        </p>
+                        <p className="mt-3 text-sm text-muted-foreground leading-relaxed">
+                          {member.description}
+                        </p>
+                      </div>
+                    ))}
+                  </div>
                 </div>
-              </div>
-            </div>
-          ))}
+              </Reveal>
+            ))}
+          </div>
         </div>
       </section>
 
