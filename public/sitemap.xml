@@ -5,15 +5,15 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://vendis-solutions.net/leistungen</loc>
+    <loc>https://vendis-solutions.net/entwicklung</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://vendis-solutions.net/software</loc>
+    <loc>https://vendis-solutions.net/technologien</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://vendis-solutions.net/methodik</loc>
+    <loc>https://vendis-solutions.net/prozess</loc>
     <priority>0.8</priority>
   </url>
   <url>
