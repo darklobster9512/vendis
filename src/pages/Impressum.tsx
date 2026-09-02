@@ -50,8 +50,8 @@ const Impressum = () => {
           <h3 className="font-mono text-[11px] uppercase tracking-[0.22em] text-muted-foreground mt-10 mb-3">Kontakt</h3>
           <p>
             E-Mail:{' '}
-            <a href="mailto:kontakt@vendis-development.de" className="text-primary hover:underline">
-              kontakt@vendis-development.de
+            <a href="mailto:kontakt@vendis-solutions.net" className="text-primary hover:underline">
+              kontakt@vendis-solutions.net
             </a>
             <br />
             Telefon:{' '}
@@ -60,8 +60,8 @@ const Impressum = () => {
             </a>
             <br />
             Website:{' '}
-            <a href="https://vendis.solutions" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">
-              vendis.solutions
+            <a href="https://vendis-solutions.net" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">
+              vendis-solutions.net
             </a>
           </p>
 

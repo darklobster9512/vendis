@@ -80,10 +80,12 @@ const resolve = (pathname: string): Meta => {
   return fallback;
 };
 
+const BASE_URL = 'https://vendis-solutions.net';
+
 const Seo = () => {
   const { pathname } = useLocation();
   const { title, description } = resolve(pathname);
-  const url = pathname === '/' ? '/' : pathname.replace(/\/+$/, '');
+  const url = BASE_URL + (pathname === '/' ? '/' : pathname.replace(/\/+$/, ''));
 
   return (
     <Helmet>

@@ -77,10 +77,10 @@ const Karriere = () => {
               Keine passende Position dabei? Initiativbewerbungen sind jederzeit willkommen —
               schreiben Sie uns an{' '}
               <a
-                href="mailto:kontakt@vendis-development.de"
+                href="mailto:kontakt@vendis-solutions.net"
                 className="text-primary hover:underline"
               >
-                kontakt@vendis-development.de
+                kontakt@vendis-solutions.net
               </a>
               .
             </p>

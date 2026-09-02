@@ -96,10 +96,10 @@ const Footer = () => (
           <ul className="mt-5 space-y-3 text-sm text-ink-foreground/70">
             <li>
               <a
-                href="mailto:kontakt@vendis-development.de"
+                href="mailto:kontakt@vendis-solutions.net"
                 className="hover:text-primary-glow transition-colors break-words"
               >
-                kontakt@vendis-development.de
+                kontakt@vendis-solutions.net
               </a>
             </li>
             <li>
