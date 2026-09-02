@@ -1,6 +1,6 @@
 # Alle Bilder in den public-Ordner verschieben
 
-Ziel: Keine Bilder mehr über CDN-URLs (`/__l5e/...`) oder Bundler-Imports laden, sondern alles als statische Dateien unter `public/images/` — damit die Seite auf dem eigenen VPS (vendis.solutions) alle Bilder ausliefert.
+Ziel: Keine Bilder mehr über CDN-URLs (`/__l5e/...`) oder Bundler-Imports laden, sondern alles als statische Dateien unter `public/images/` — damit die Seite auf dem eigenen VPS (vendis-solutions.net) alle Bilder ausliefert.
 
 ## Was passiert
 

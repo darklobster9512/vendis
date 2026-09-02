@@ -6,7 +6,7 @@ Die Website wird vom technischen Beratungs-/Anlagenplanungs-Auftritt (for.tel So
 
 Vendis Development Services GmbH, Neue Schönhauser Str. 2, 10178 Berlin ·
 Amtsgericht Charlottenburg, HRB 279085 B · Geschäftsführer: Sebastian Andre Deutsch, Thomas Friedrich Witt ·
-https://vendis.solutions · kontakt@vendis-development.de · 030 123456789
+https://vendis-solutions.net · kontakt@vendis-solutions.net · 030 123456789
 
 Alle Vorkommen von "for.tel Solutions", Filderstadt, alter Adresse, HRB 720843, Manfred Beutel, kontakt@for-tel.com, alter Telefonnummer und alter Domain werden ersetzt. Die alte USt-IdNr. wird entfernt (keine neue verfügbar) — bitte nachreichen, falls vorhanden.
 

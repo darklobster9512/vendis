@@ -21,8 +21,8 @@ const contactInfo = [
   { label: 'Telefon', value: '030 692095650', href: 'tel:+4930692095650' },
   {
     label: 'E-Mail',
-    value: 'kontakt@vendis-development.de',
-    href: 'mailto:kontakt@vendis-development.de',
+    value: 'kontakt@vendis-solutions.net',
+    href: 'mailto:kontakt@vendis-solutions.net',
   },
   { label: 'Adresse', value: 'Neue Schönhauser Str. 2, 10178 Berlin', href: undefined },
   { label: 'Erreichbarkeit', value: 'Mo–Fr · 09:00 – 18:00 Uhr', href: undefined },

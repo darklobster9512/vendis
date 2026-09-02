@@ -2,20 +2,20 @@
 
 ## Ziel
 Überall im Projekt:
-- `vendis.solutions` → `vendis-solutions.net`
-- `kontakt@vendis-development.de` → `kontakt@vendis-solutions.net`
+- `vendis-solutions.net` → `vendis-solutions.net`
+- `kontakt@vendis-solutions.net` → `kontakt@vendis-solutions.net`
 
 ## Betroffene Stellen (verifiziert)
 
-### Domain `vendis.solutions` → `vendis-solutions.net`
-- `vite.config.ts` (Z. 14): `allowedHosts` — `vendis.solutions`/`www.vendis.solutions` ersetzen (for-tel-Einträge bleiben)
-- `index.html` (JSON-LD): `"url": "https://vendis.solutions"` und `"logo": "https://vendis.solutions/favicon-512.png"`
+### Domain `vendis-solutions.net` → `vendis-solutions.net`
+- `vite.config.ts` (Z. 14): `allowedHosts` — `vendis-solutions.net`/`www.vendis-solutions.net` ersetzen (for-tel-Einträge bleiben)
+- `index.html` (JSON-LD): `"url": "https://vendis-solutions.net"` und `"logo": "https://vendis-solutions.net/favicon-512.png"`
 - `public/robots.txt`: Sitemap-URL
 - `public/sitemap.xml`: alle 9 `<loc>`-Einträge
-- `src/pages/Impressum.tsx`: Link `https://vendis.solutions` + sichtbarer Text
-- `src/components/landing/HeroSection.tsx`: `app.vendis.solutions/...` → `app.vendis-solutions.net/...`
+- `src/pages/Impressum.tsx`: Link `https://vendis-solutions.net` + sichtbarer Text
+- `src/components/landing/HeroSection.tsx`: `app.vendis-solutions.net/...` → `app.vendis-solutions.net/...`
 
-### E-Mail `kontakt@vendis-development.de` → `kontakt@vendis-solutions.net`
+### E-Mail `kontakt@vendis-solutions.net` → `kontakt@vendis-solutions.net`
 - `index.html` (JSON-LD `"email"`)
 - `src/pages/Kontakt.tsx`, `src/pages/Karriere.tsx`, `src/pages/Impressum.tsx`, `src/pages/Datenschutz.tsx`
 - `src/components/landing/Footer.tsx`, `src/components/landing/Navbar.tsx`

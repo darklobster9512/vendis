@@ -13,4 +13,4 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://vendis.solutions/sitemap.xml
+Sitemap: https://vendis-solutions.net/sitemap.xml
