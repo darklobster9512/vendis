@@ -80,7 +80,7 @@ const resolve = (pathname: string): Meta => {
   return fallback;
 };
 
-const BASE_URL = 'https://vendis-solutions.net';
+const BASE_URL = 'https://vendis-solutions.de';
 
 const Seo = () => {
   const { pathname } = useLocation();

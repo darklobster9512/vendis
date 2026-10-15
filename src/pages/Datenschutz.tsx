@@ -22,8 +22,8 @@ const Datenschutz = () => {
             Neue Schönhauser Str. 2<br />
             10178 Berlin<br />
             E-Mail:{' '}
-            <a href="mailto:kontakt@vendis-solutions.net" className="text-primary hover:underline">
-              kontakt@vendis-solutions.net
+            <a href="mailto:kontakt@vendis-solutions.de" className="text-primary hover:underline">
+              kontakt@vendis-solutions.de
             </a>
             <br />
             Telefon:{' '}
