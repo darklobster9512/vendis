@@ -1,39 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://vendis-solutions.net/</loc>
+    <loc>https://vendis-solutions.de/</loc>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://vendis-solutions.net/entwicklung</loc>
+    <loc>https://vendis-solutions.de/entwicklung</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://vendis-solutions.net/technologien</loc>
+    <loc>https://vendis-solutions.de/technologien</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://vendis-solutions.net/prozess</loc>
+    <loc>https://vendis-solutions.de/prozess</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://vendis-solutions.net/team</loc>
+    <loc>https://vendis-solutions.de/team</loc>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://vendis-solutions.net/kontakt</loc>
+    <loc>https://vendis-solutions.de/kontakt</loc>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://vendis-solutions.net/karriere</loc>
+    <loc>https://vendis-solutions.de/karriere</loc>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://vendis-solutions.net/impressum</loc>
+    <loc>https://vendis-solutions.de/impressum</loc>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://vendis-solutions.net/datenschutz</loc>
+    <loc>https://vendis-solutions.de/datenschutz</loc>
     <priority>0.3</priority>
   </url>
 </urlset>

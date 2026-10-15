@@ -143,10 +143,10 @@ const Navbar = () => {
             030 692095650
           </a>
           <a
-            href="mailto:kontakt@vendis-solutions.net"
+            href="mailto:kontakt@vendis-solutions.de"
             className="block hover:text-ink-foreground transition-colors"
           >
-            kontakt@vendis-solutions.net
+            kontakt@vendis-solutions.de
           </a>
           <p>Neue Schönhauser Str. 2 · 10178 Berlin</p>
         </div>
