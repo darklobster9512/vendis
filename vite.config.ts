@@ -11,7 +11,14 @@ export default defineConfig(({ mode }) => ({
     hmr: {
       overlay: false,
     },
-    allowedHosts: ["for-tel.solutions", "www.for-tel.solutions", "vendis-solutions.net", "www.vendis-solutions.net"],
+    allowedHosts: [
+      "for-tel.solutions",
+      "www.for-tel.solutions",
+      "vendis-solutions.net",
+      "www.vendis-solutions.net",
+      "vendis-solutions.de",
+      "www.vendis-solutions.de",
+    ],
   },
   plugins: [react(), mode === "development" && componentTagger()].filter(Boolean),
   resolve: {
